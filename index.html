@@ -6,20 +6,30 @@
   <title>psykeub — Kritisk hjelp, alltid innen rekkevidde</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<script>
-  const burger = document.getElementById('burger-btn');
-  const nav = document.getElementById('mobile-nav');
-
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('show');
-  });
-</script>
 <body>
 
   <!-- HEADER -->
-  <header class="container header">
-    <div class="logo">psykeub</div>
-    <nav class="nav">
+  <header class="header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <div class="logo">psykeub</div>
+
+      <!-- Desktop meny -->
+      <nav class="nav desktop-nav">
+        <a href="index.html">Hjem</a>
+        <a href="product.html">Nettbutikk</a>
+        <a href="film.html">Film</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <!-- Burger button -->
+      <button class="burger-btn" id="burgerBtn">☰</button>
+
+    </div>
+
+    <!-- Mobilmeny -->
+    <nav class="mobile-nav" id="mobileNav">
       <a href="index.html">Hjem</a>
       <a href="product.html">Nettbutikk</a>
       <a href="film.html">Film</a>
@@ -34,50 +44,52 @@
       <div class="hero-left">
         <h1 class="hero-title">Kritisk hjelp – alltid innen rekkevidde</h1>
         <p class="hero-sub">De viktigste norske nødnumrene og hjelpelinjen for mental helse — rett på kjøleskapet ditt.</p>
-
         <div class="hero-cta">
           <a class="cta-btn" href="product.html">Kjøp magneten</a>
         </div>
       </div>
 
       <aside class="magnet-preview">
-        <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet PsykeUB" style="max-width:100%;border-radius:12px;">
+        <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet PsykeUB">
       </aside>
     </section>
 
-
     <!-- SEKSJON 2 – VIDEO -->
-    <section class="film-container" style="margin-top:70px;display:flex;gap:40px;align-items:center;flex-wrap:wrap">
-      
-      <!-- Placeholder Video -->
-      <div style="flex:1;min-width:280px;">
-        <div style="background:#ddd;height:260px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#666;">
-          VIDEO KOMMER HER
-        </div>
+    <section class="film-container">
+      <div class="film-video">
+        <div class="video-placeholder">VIDEO KOMMER HER</div>
       </div>
 
-      <!-- Tekst -->
-      <div style="flex:1;min-width:280px;">
+      <div class="film-text">
         <h2>Vår kortfilm</h2>
         <p>En kort informasjonsfilm om trygghet, mental helse og hvorfor vi laget denne magneten.</p>
         <a class="cta-btn" href="film.html">Se filmen</a>
       </div>
     </section>
 
-
     <!-- SEKSJON 3 – KONTAKT -->
-    <section id="kontakt" style="margin-top:70px;padding:40px 0;border-top:1px solid #e5e5e5;">
+    <section id="kontakt" class="kontakt">
       <h2>Kontakt oss</h2>
-      <p style="font-size:18px;margin-top:10px;">E-post: kontakt@psykeub.no</p> <!-- Placeholder, du kan gi meg riktig e-post senere -->
+      <p>E-post: kontakt@psykeub.no</p>
     </section>
-
 
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div>© psykeub | Ungdomsbedrift 2025</div>
-    <div style="font-size:13px;color:var(--muted)">Laget med ❤️ i Norge</div>
+    <div class="footer-small">Laget med ❤️ i Norge</div>
+  </footer>
 
+  <!-- BURGER MENU SCRIPT -->
+  <script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
 
+    burgerBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('show');
+    });
+  </script>
 
+</body>
+</html>
