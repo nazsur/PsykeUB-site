@@ -6,6 +6,14 @@
   <title>Nettbutikk – Sikkerhetsmagnet</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+  <script>
+  const burger = document.getElementById('burger-btn');
+  const nav = document.getElementById('mobile-nav');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
 <body>
   <header class="container header">
     <div class="logo">psykeub</div>
@@ -77,4 +85,5 @@
     <a href="index.html#kontakt">Kontakt</a>
   </nav>
 </header>
+
 
