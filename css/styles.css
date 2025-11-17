@@ -171,3 +171,14 @@ body {
 .mobile-nav.show {
   display: flex;
 }
+
+/* Универсальный отступ для контейнера */
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Отступ снизу у контактов */
+#kontakt {
+    padding-bottom: 80px;
+}
