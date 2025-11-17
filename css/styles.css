@@ -141,5 +141,19 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui
     width: 100%;
   }
 }
+@media (max-width: 600px) {
+  .logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .nav {
+    display: none; /* меню отключено на телефонах пока нет мобильного меню */
+  }
+}
 
 
