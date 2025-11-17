@@ -155,5 +155,82 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui
     display: none; /* меню отключено на телефонах пока нет мобильного меню */
   }
 }
+/* HEADER BASE */
+.header {
+  width: 100%;
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: center;           /* ЛОГО ПО ЦЕНТРУ */
+  align-items: center;
+  position: relative;
+}
+
+/* LOGO */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* DESKTOP NAV */
+.desktop-nav {
+  display: flex;
+  gap: 24px;
+  position: absolute;
+  right: 0;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* BURGER BUTTON */
+.burger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* MOBILE NAV */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+.mobile-nav a {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  border-top: 1px solid #eee;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block;
+  }
+}
+
 
 
