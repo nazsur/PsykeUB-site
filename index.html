@@ -6,7 +6,14 @@
   <title>psykeub — Kritisk hjelp, alltid innen rekkevidde</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<script>
+  const burger = document.getElementById('burger-btn');
+  const nav = document.getElementById('mobile-nav');
 
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
 <body>
 
   <!-- HEADER -->
@@ -100,4 +107,5 @@
     <a href="index.html#kontakt">Kontakt</a>
   </nav>
 </header>
+
 
