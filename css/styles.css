@@ -79,4 +79,67 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui
   }
 
 }
+/* ============================================
+   MOBIL TILPASSING (max 768px)
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* 1. Header forbedringer */
+  .header {
+    padding: 12px 16px;
+    justify-content: space-between;
+  }
+
+  /* Logo mer sentrert og ikke klemt til venstre */
+  .logo {
+    font-size: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+  }
+
+  /* Navigasjon skjules på mobile (kommer senere med hamburger-meny) */
+  .nav {
+    display: none;
+  }
+
+  /* CTA-knapp skjules (ikke nødvendig på mobil) */
+  .cta-btn {
+    display: none;
+  }
+
+  /* Viser burger-knappen på mobil */
+  #nav-toggle {
+    display: block !important;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Seksjoner stablet vertikalt */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .magnet-preview {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .product-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-image, 
+  .product-info {
+    width: 100%;
+  }
+}
+
 
