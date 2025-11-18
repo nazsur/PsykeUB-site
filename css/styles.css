@@ -223,4 +223,144 @@ a {
     }
 }
 
+/* ================================
+   DESKTOP REDESIGN (only > 900px)
+   ================================ */
+@media (min-width: 900px) {
+
+    body {
+        background: #f5fafc;
+    }
+
+    /* Header */
+    .header {
+        padding: 25px 40px;
+        background: white;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .header-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+    }
+
+    .desktop-nav a {
+        font-size: 18px;
+        margin-left: 30px;
+        transition: 0.25s ease;
+    }
+
+    .desktop-nav a:hover {
+        color: #0056a8;
+    }
+
+    /* Hero (главный экран) */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 40px;
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .hero-left {
+        max-width: 55%;
+    }
+
+    .hero-title {
+        font-size: 52px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+
+    .hero-sub {
+        font-size: 22px;
+        color: #555;
+        margin-bottom: 30px;
+        max-width: 85%;
+    }
+
+    .cta-btn {
+        padding: 18px 32px;
+        font-size: 20px;
+        background: #0a52b5;
+        transition: 0.2s;
+    }
+
+    .cta-btn:hover {
+        background: #003f8a;
+    }
+
+    /* Magnet image */
+    .magnet-preview img {
+        width: 340px;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .magnet-preview img:hover {
+        transform: scale(1.03);
+    }
+
+    /* Film section */
+    .film-container {
+        max-width: 1300px;
+        margin: 80px auto;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .video-placeholder {
+        height: 320px !important;
+        border-radius: 20px;
+    }
+
+    .film-text h2 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .film-text p {
+        font-size: 20px;
+        color: #444;
+        max-width: 550px;
+        line-height: 1.6;
+    }
+
+    /* Contact */
+    .kontakt {
+        max-width: 1300px;
+        margin: 100px auto;
+        padding: 0 40px;
+    }
+
+    .kontakt h2 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .kontakt p {
+        font-size: 20px;
+        color: #444;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
 
