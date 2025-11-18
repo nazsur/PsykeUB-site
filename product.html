@@ -6,6 +6,14 @@
   <title>Nettbutikk – Sikkerhetsmagnet</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<script>
+  const burger = document.getElementById("burger");
+  const mobileNav = document.getElementById("mobileNav");
+
+  burger.addEventListener("click", () => {
+    mobileNav.classList.toggle("show");
+  });
+</script>
 
 <body>
 
@@ -85,16 +93,9 @@
       nav.classList.toggle('show');
     });
   </script>
-<script>
-  const burger = document.getElementById("burger");
-  const mobileNav = document.getElementById("mobileNav");
-
-  burger.addEventListener("click", () => {
-    mobileNav.classList.toggle("show");
-  });
-</script>
 
 </body>
 </html>
+
 
 
