@@ -6,13 +6,27 @@
   <title>Nettbutikk – Sikkerhetsmagnet</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <!-- HEADER (единственный) -->
+
+  <!-- BURGER SCRIPT (универсальный) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const burger = document.getElementById("burger-btn");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      if (burger && mobileNav) {
+        burger.addEventListener("click", () => {
+          mobileNav.classList.toggle("show");
+        });
+      }
+    });
+  </script>
+
   <header class="header">
     <div class="header-inner">
       <div class="logo">psykeub</div>
 
-      <!-- Desktop Navigation -->
       <nav class="nav desktop-nav">
         <a href="index.html">Hjem</a>
         <a href="product.html" class="active">Nettbutikk</a>
@@ -20,12 +34,10 @@
         <a href="index.html#kontakt">Kontakt</a>
       </nav>
 
-      <!-- Burger Button (универсальный id) -->
-      <button id="burger-btn" class="burger-btn" aria-label="Åpne meny">☰</button>
+      <button id="burger-btn" class="burger-btn">☰</button>
     </div>
 
-    <!-- Mobile Navigation (скрыта по умолчанию) -->
-    <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
+    <nav id="mobile-nav" class="mobile-nav">
       <a href="index.html">Hjem</a>
       <a href="product.html" class="active">Nettbutikk</a>
       <a href="film.html">Film</a>
@@ -34,7 +46,9 @@
   </header>
 
   <main class="container">
+
     <section class="product-wrapper">
+
       <div class="product-image">
         <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet">
       </div>
@@ -49,7 +63,9 @@
 
         <button class="cta-btn">Kjøp nå</button>
       </div>
+
     </section>
+
   </main>
 
   <footer class="footer">
@@ -57,32 +73,5 @@
     <div>Laget med ❤️ i Norge</div>
   </footer>
 
-  <!-- СКРИПТ: безопасно и универсально -->
-  <script>
-    // Ждём загрузки DOM чтобы элементы точно существовали
-    document.addEventListener('DOMContentLoaded', function () {
-      // Возможные id-кандидаты (включая старые вариации)
-      const burger = document.getElementById('burger-btn') || document.getElementById('burger');
-      const mobileNav = document.getElementById('mobile-nav') || document.getElementById('mobileNav');
-
-      if (!burger || !mobileNav) return; // если чего-то нет — тихо выходим
-
-      // Тогглим класс и aria-атрибуты для доступности
-      burger.addEventListener('click', () => {
-        const isShown = mobileNav.classList.toggle('show');
-        mobileNav.setAttribute('aria-hidden', !isShown);
-        burger.setAttribute('aria-expanded', isShown ? 'true' : 'false');
-      });
-
-      // Закрыть меню при клике по ссылке (удобно на мобильных)
-      mobileNav.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          mobileNav.classList.remove('show');
-          mobileNav.setAttribute('aria-hidden', 'true');
-          burger.setAttribute('aria-expanded', 'false');
-        });
-      });
-    });
-  </script>
 </body>
 </html>
