@@ -10,31 +10,34 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header">
-    <div class="header-inner">
+ <header class="header">
+  <div class="header-inner">
+    
+    <!-- ЛОГО ВЛЕВО -->
+    <div class="logo desktop-logo">psykeub</div>
 
-      <div class="logo">psykeub</div>
-
-      <!-- Desktop Navigation -->
-      <nav class="nav desktop-nav">
-        <a href="index.html">Hjem</a>
-        <a href="product.html">Nettbutikk</a>
-        <a href="film.html">Film</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-
-      <!-- Burger Button -->
-      <button id="burger" class="burger-btn">☰</button>
-    </div>
-
-    <!-- Mobile Nav -->
-    <nav class="mobile-nav" id="mobileNav">
+    <!-- Навигация -->
+    <nav class="nav desktop-nav">
       <a href="index.html">Hjem</a>
       <a href="product.html">Nettbutikk</a>
       <a href="film.html">Film</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="index.html#kontakt">Kontakt</a>
     </nav>
-  </header>
+
+    <!-- Бургер -->
+    <button id="burger-btn" class="burger-btn">☰</button>
+
+  </div>
+
+  <!-- Мобильное меню -->
+  <nav id="mobile-nav" class="mobile-nav">
+    <a href="index.html">Hjem</a>
+    <a href="product.html">Nettbutikk</a>
+    <a href="film.html">Film</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </nav>
+</header>
+
 
   <main class="container">
 
@@ -95,3 +98,4 @@
 
 </body>
 </html>
+
