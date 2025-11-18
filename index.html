@@ -6,20 +6,13 @@
   <title>psykeub — Kritisk hjelp, alltid innen rekkevidde</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<script>
-  const burger = document.getElementById("burger");
-  const mobileNav = document.getElementById("mobileNav");
-
-  burger.addEventListener("click", () => {
-    mobileNav.classList.toggle("show");
-  });
-</script>
 
 <body>
 
   <!-- HEADER -->
   <header class="header">
     <div class="header-inner">
+
       <div class="logo">psykeub</div>
 
       <!-- Desktop Navigation -->
@@ -31,11 +24,11 @@
       </nav>
 
       <!-- Burger Button -->
-      <button id="burger-btn" class="burger-btn">☰</button>
+      <button id="burger" class="burger-btn">☰</button>
     </div>
 
-    <!-- Mobile Navigation -->
-    <nav id="mobile-nav" class="mobile-nav">
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobileNav">
       <a href="index.html">Hjem</a>
       <a href="product.html">Nettbutikk</a>
       <a href="film.html">Film</a>
@@ -59,7 +52,7 @@
       </div>
 
       <aside class="magnet-preview">
-        <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet" />
+        <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet">
       </aside>
     </section>
 
@@ -81,25 +74,6 @@
       <h2>Kontakt oss</h2>
       <p>E-post: kontakt@psykeub.no</p>
     </section>
-<header class="container header">
-  <div class="logo">psykeub</div>
-
-  <nav class="nav">
-    <a href="index.html">Hjem</a>
-    <a href="product.html">Nettbutikk</a>
-    <a href="film.html">Film</a>
-    <a href="index.html#kontakt">Kontakt</a>
-  </nav>
-
-  <button id="burger" class="burger-btn">☰</button>
-</header>
-
-<nav class="mobile-nav" id="mobileNav">
-  <a href="index.html">Hjem</a>
-  <a href="product.html">Nettbutikk</a>
-  <a href="film.html">Film</a>
-  <a href="index.html#kontakt">Kontakt</a>
-</nav>
 
   </main>
 
@@ -109,10 +83,15 @@
     <div>Laget med ❤️ i Norge</div>
   </footer>
 
+  <!-- Burger Script -->
+  <script>
+    const burger = document.getElementById("burger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    burger.addEventListener("click", () => {
+      mobileNav.classList.toggle("show");
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
