@@ -201,3 +201,26 @@ a {
   }
 }
 
+/* Унифицированный размер изображения магнита на мобильной версии */
+.magnet-preview img {
+    width: 100%;
+    max-width: 380px;   /* как на странице продукта */
+    display: block;
+    margin: 20px auto;  /* центрируем */
+}
+
+/* На средних экранах можно чуть увеличивать */
+@media (min-width: 600px) {
+    .magnet-preview img {
+        max-width: 420px;
+    }
+}
+
+/* На больших экранах */
+@media (min-width: 900px) {
+    .magnet-preview img {
+        max-width: 480px;
+    }
+}
+
+
