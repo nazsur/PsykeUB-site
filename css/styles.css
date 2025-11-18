@@ -363,4 +363,11 @@ a {
     }
 }
 
+.desktop-logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a4ff5;   /* красивый синий */
+  margin-right: auto; /* отталкивает меню вправо */
+}
+
 
