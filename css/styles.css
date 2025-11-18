@@ -434,4 +434,26 @@ a {
   }
 }
 
+/* ===== FIX: Логотип слева на ПК ===== */
+@media (min-width: 900px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-inner {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .logo {
+        margin-right: auto;   /* отправляет меню вправо */
+        color: #1a4ff5;       /* синий цвет */
+        font-size: 28px;
+        font-weight: 800;
+    }
+}
+
 
