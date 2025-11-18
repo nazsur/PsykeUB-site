@@ -186,3 +186,18 @@ a {
 
 }
 
+/* ---- MOBILE FIX: Mindre magnetbilde på forsiden ---- */
+@media (max-width: 768px) {
+  .magnet-preview img {
+    width: 70%;        /* gjør bildet mindre */
+    max-width: 240px;  /* forhindrer at det blir for stort */
+    margin: 0 auto;    /* sentrer bildet */
+    display: block;
+  }
+
+  /* Litt mer luft mellom seksjoner */
+  .hero {
+    gap: 20px;
+  }
+}
+
