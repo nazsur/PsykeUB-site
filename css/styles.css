@@ -173,3 +173,44 @@ body {
     max-width: 100%; /* Фото адаптируется */
   }
 }
+/* --- Desktop default --- */
+.burger-btn {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* --- MOBILE VERSION --- */
+@media (max-width: 768px) {
+
+  /* Показываем бургер */
+  .burger-btn {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Скрываем обычное меню */
+  .nav {
+    display: none;
+  }
+
+  /* Мобильное меню (скрыто по умолчанию) */
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+
+  /* Когда JS включает .show */
+  .mobile-nav.show {
+    display: flex;
+  }
+}
+
