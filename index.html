@@ -2,20 +2,19 @@
 <html lang="nb">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>psykeub — Kritisk hjelp, alltid innen rekkevidde</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
   <!-- HEADER -->
   <header class="header">
     <div class="header-inner">
-
-      <!-- Logo -->
       <div class="logo">psykeub</div>
 
-      <!-- Desktop meny -->
+      <!-- Desktop Navigation -->
       <nav class="nav desktop-nav">
         <a href="index.html">Hjem</a>
         <a href="product.html">Nettbutikk</a>
@@ -23,13 +22,12 @@
         <a href="#kontakt">Kontakt</a>
       </nav>
 
-      <!-- Burger button -->
-      <button class="burger-btn" id="burgerBtn">☰</button>
-
+      <!-- Burger Button -->
+      <button id="burger-btn" class="burger-btn">☰</button>
     </div>
 
-    <!-- Mobilmeny -->
-    <nav class="mobile-nav" id="mobileNav">
+    <!-- Mobile Navigation -->
+    <nav id="mobile-nav" class="mobile-nav">
       <a href="index.html">Hjem</a>
       <a href="product.html">Nettbutikk</a>
       <a href="film.html">Film</a>
@@ -39,22 +37,25 @@
 
   <main class="container">
 
-    <!-- SEKSJON 1 – MAGNET -->
+    <!-- SECTION 1 – MAGNET -->
     <section class="hero">
       <div class="hero-left">
         <h1 class="hero-title">Kritisk hjelp – alltid innen rekkevidde</h1>
-        <p class="hero-sub">De viktigste norske nødnumrene og hjelpelinjen for mental helse — rett på kjøleskapet ditt.</p>
+        <p class="hero-sub">
+          De viktigste norske nødnumrene og hjelpelinjen for mental helse — rett på kjøleskapet ditt.
+        </p>
+
         <div class="hero-cta">
           <a class="cta-btn" href="product.html">Kjøp magneten</a>
         </div>
       </div>
 
       <aside class="magnet-preview">
-        <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet PsykeUB">
+        <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet" />
       </aside>
     </section>
 
-    <!-- SEKSJON 2 – VIDEO -->
+    <!-- SECTION 2 – FILM -->
     <section class="film-container">
       <div class="film-video">
         <div class="video-placeholder">VIDEO KOMMER HER</div>
@@ -67,7 +68,7 @@
       </div>
     </section>
 
-    <!-- SEKSJON 3 – KONTAKT -->
+    <!-- SECTION 3 – KONTAKT -->
     <section id="kontakt" class="kontakt">
       <h2>Kontakt oss</h2>
       <p>E-post: kontakt@psykeub.no</p>
@@ -78,16 +79,14 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div>© psykeub | Ungdomsbedrift 2025</div>
-    <div class="footer-small">Laget med ❤️ i Norge</div>
+    <div>Laget med ❤️ i Norge</div>
   </footer>
 
-  <!-- BURGER MENU SCRIPT -->
   <script>
-    const burgerBtn = document.getElementById('burgerBtn');
-    const mobileNav = document.getElementById('mobileNav');
-
-    burgerBtn.addEventListener('click', () => {
-      mobileNav.classList.toggle('show');
+    const burger = document.getElementById('burger-btn');
+    const nav = document.getElementById('mobile-nav');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('show');
     });
   </script>
 
