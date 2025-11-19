@@ -87,8 +87,21 @@
     <div>© psykeub | Ungdomsbedrift 2025</div>
     <div>Laget med ❤️ i Norge</div>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  if (burger && mobileNav) {
+    burger.addEventListener("click", () => {
+      mobileNav.classList.toggle("show");
+    });
+  }
+});
+</script>
 
 </body>
 </html>
+
 
 
