@@ -268,3 +268,40 @@ button:focus, a:focus{outline:3px solid rgba(10,85,224,0.16); outline-offset:4px
 /* tiny helpers */
 .center{text-align:center}
 .small{font-size:14px;color:var(--muted)}
+
+/* ============================
+   FIX: MOBILE NAV BEHAVIOUR
+   ============================ */
+
+/* На мобильных — скрыть ПК-навигацию и показать бургер */
+@media (max-width: 900px) {
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .burger-btn {
+    display: block !important;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+  }
+}
+
+/* На ПК — скрыть бургер, включить меню */
+@media (min-width: 901px) {
+
+  .burger-btn {
+    display: none !important;
+  }
+
+  .desktop-nav {
+    display: flex !important;
+  }
+
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
