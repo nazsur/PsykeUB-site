@@ -5,98 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>psykeub — Kritisk hjelp, alltid innen rekkevidde</title>
   <link rel="stylesheet" href="css/styles.css">
-
-  <style>
-    /* Бургер анимация */
-    .burger-btn {
-      width: 32px;
-      height: 26px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .burger-btn span,
-    .burger-btn:before,
-    .burger-btn:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      background: #000;
-      transition: 0.3s ease;
-    }
-
-    .burger-btn:before {
-      top: 0;
-    }
-
-    .burger-btn span {
-      middle: 0;
-    }
-
-    .burger-btn:after {
-      bottom: 0;
-    }
-
-    .burger-btn.open:before {
-      transform: rotate(45deg);
-      top: 11px;
-    }
-
-    .burger-btn.open:after {
-      transform: rotate(-45deg);
-      bottom: 11px;
-    }
-
-    .burger-btn.open span {
-      opacity: 0;
-    }
-
-    /* отступ для мобильной версии под меню */
-    @media (max-width: 768px) {
-      main {
-        margin-top: 30px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-
-    <div class="logo desktop-logo">psykeub</div>
+    
+    <div class="logo">psykeub</div>
 
     <nav class="nav desktop-nav">
       <a href="index.html">Hjem</a>
       <a href="product.html">Nettbutikk</a>
       <a href="film.html">Film</a>
-      <a href="#bottom">Kontakt</a>
+      <a href="#footer-contact">Kontakt</a>
     </nav>
 
-    <button id="burger-btn" class="burger-btn">
+    <!-- ✅ ЕДИНЫЙ БУРГЕР -->
+    <button class="burger-btn" id="burger-btn">
+      <span></span>
+      <span></span>
       <span></span>
     </button>
+
   </div>
 
   <nav id="mobile-nav" class="mobile-nav">
     <a href="index.html">Hjem</a>
     <a href="product.html">Nettbutikk</a>
     <a href="film.html">Film</a>
-    <a href="#bottom">Kontakt</a>
+    <a href="#footer-contact">Kontakt</a>
   </nav>
 </header>
 
 <main class="container">
 
+  <!-- SECTION 1 -->
   <section class="hero">
     <div class="hero-left">
       <h1 class="hero-title">Kritisk hjelp – alltid innen rekkevidde</h1>
-
       <p class="hero-sub">
         De viktigste norske nødnumrene og hjelpelinjen for mental helse — rett på kjøleskapet ditt.
       </p>
@@ -111,26 +58,27 @@
     </aside>
   </section>
 
-  <section class="film-container">
-    <div class="film-video">
-      <div class="video-placeholder">VIDEO KOMMER HER</div>
-    </div>
 
+  <!-- SECTION 2 -->
+  <section class="film-container">
+    <div class="video-placeholder">VIDEO KOMMER HER</div>
     <div class="film-text">
       <h2>Vår kortfilm</h2>
       <p>En kort informasjonsfilm om trygghet, mental helse og hvorfor vi laget denne magneten.</p>
       <a class="cta-btn" href="film.html">Se filmen</a>
     </div>
   </section>
+
 </main>
 
-<footer class="footer" id="bottom">
+<footer class="footer" id="footer-contact">
   <div>© psykeub | Ungdomsbedrift 2025</div>
   <div>Kontakt oss: psykeub@gmail.no</div>
   <div>Laget med ❤️ i Norge</div>
 </footer>
 
-<!-- ✅ Бургер работает ВЕЗДЕ -->
+
+<!-- ✅ ЕДИНЫЙ РАБОЧИЙ СКРИПТ БУРГЕРА -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger-btn");
@@ -138,12 +86,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (burger && mobileNav) {
     burger.addEventListener("click", function () {
+      burger.classList.toggle("active");
       mobileNav.classList.toggle("show");
-      burger.classList.toggle("open");
     });
   }
 });
 </script>
-
 </body>
 </html>
