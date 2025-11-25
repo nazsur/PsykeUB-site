@@ -344,3 +344,46 @@ a{text-decoration:none;color:inherit}
 .mobile-nav {
   margin-top: 10px;
 }
+
+.burger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-btn span {
+  width: 28px;
+  height: 3px;
+  background: #0a57e0;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Анимация в крестик */
+.burger-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 900px) {
+  .burger-btn {
+    display: flex;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+}
