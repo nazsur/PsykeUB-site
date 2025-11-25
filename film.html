@@ -9,87 +9,69 @@
 
 <body>
 
-  <!-- BURGER SCRIPT -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const burger = document.getElementById("burger-btn");
-      const mobileNav = document.getElementById("mobile-nav");
-
-      if (burger && mobileNav) {
-        burger.addEventListener("click", () => {
-          mobileNav.classList.toggle("show");
-        });
-      }
-    });
-  </script>
-
 <header class="header">
   <div class="header-inner">
-    
-    <!-- ЛОГО ВЛЕВО -->
+
+    <!-- Logo -->
     <div class="logo desktop-logo">psykeub</div>
 
-    <!-- Навигация -->
+    <!-- Desktop Nav -->
     <nav class="nav desktop-nav">
       <a href="index.html">Hjem</a>
       <a href="product.html">Nettbutikk</a>
-      <a href="film.html">Film</a>
+      <a href="film.html" class="active">Film</a>
       <a href="index.html#kontakt">Kontakt</a>
     </nav>
 
-    <!-- Бургер -->
+    <!-- Burger -->
     <button id="burger-btn" class="burger-btn">☰</button>
-
   </div>
 
-  <!-- Мобильное меню -->
+  <!-- Mobile Navigation -->
   <nav id="mobile-nav" class="mobile-nav">
     <a href="index.html">Hjem</a>
     <a href="product.html">Nettbutikk</a>
-    <a href="film.html">Film</a>
+    <a href="film.html" class="active">Film</a>
     <a href="index.html#kontakt">Kontakt</a>
   </nav>
 </header>
 
+<main class="container">
 
-  <main class="container">
+  <section class="film-page">
 
-    <section class="film-page">
+    <h1>Kortfilm</h1>
 
-      <h1>Kortfilm</h1>
+    <div class="video-placeholder large">Video kommer snart</div>
 
-      <div class="video-placeholder large">Video kommer snart</div>
+    <p class="film-text">
+      Kortfilmen vår handler om hvordan mennesker i Norge opplever tap, psykisk helse og viktigheten av å be om hjelp når livet blir tungt.
+      <br><br>
+      Gjennom ekte historier fortalt av kjente og mindre kjente personer, ønsker filmen å vise at ingen står alene i møte med sorg, kriser eller uventede hendelser.
+      <br><br>
+      Prosjektet skapes i samarbeid med ulike bidragsytere og støttespillere, og målet er å øke bevisstheten rundt mental helse og gjøre det enklere å finne riktig hjelp – både i hverdagen og i akutte situasjoner.
+    </p>
 
-      <p class="film-text">
-        Kortfilmen vår handler om hvordan mennesker i Norge opplever tap, psykisk helse og viktigheten av å be om hjelp når livet blir tungt.
-        <br><br>
-        Gjennom ekte historier fortalt av kjente og mindre kjente personer, ønsker filmen å vise at ingen står alene i møte med sorg, kriser eller uventede hendelser.
-        <br><br>
-        Prosjektet skapes i samarbeid med ulike bidragsytere og støttespillere, og målet er å øke bevisstheten rundt mental helse og gjøre det enklere å finne riktig hjelp – både i hverdagen og i akutte situasjoner.
-      </p>
+  </section>
 
-    </section>
+</main>
 
-  </main>
+<footer class="footer">
+  <div>© psykeub | Ungdomsbedrift 2025</div>
+  <div>Laget med ❤️ i Norge</div>
+</footer>
 
-  <footer class="footer">
-    <div>© psykeub | Ungdomsbedrift 2025</div>
-    <div>Laget med ❤️ i Norge</div>
-  </footer>
+<!-- ✅ WORKING BURGER SCRIPT — ТОЛЬКО ОДИН -->
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger-btn");
   const mobileNav = document.getElementById("mobile-nav");
 
-  if (burger && mobileNav) {
-    burger.addEventListener("click", () => {
-      mobileNav.classList.toggle("show");
-    });
-  }
+  burger.addEventListener("click", function () {
+    mobileNav.classList.toggle("show");
+  });
 });
 </script>
 
 </body>
 </html>
-
-
