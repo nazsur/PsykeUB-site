@@ -12,9 +12,11 @@
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    
+
+    <!-- ЛОГО -->
     <div class="logo desktop-logo">psykeub</div>
 
+    <!-- NAV (DESKTOP) -->
     <nav class="nav desktop-nav">
       <a href="index.html">Hjem</a>
       <a href="product.html">Nettbutikk</a>
@@ -23,7 +25,7 @@
     </nav>
 
     <!-- BURGER -->
-    <button id="burger-btn" class="burger-btn">
+    <button id="burger-btn" class="burger-btn" aria-label="Menu">
       <span></span>
       <span></span>
       <span></span>
@@ -40,6 +42,7 @@
   </nav>
 </header>
 
+
 <main class="container">
 
   <section class="film-page">
@@ -50,13 +53,9 @@
 
     <p class="film-text">
       Kortfilmen vår handler om hvordan mennesker i Norge opplever tap, psykisk helse og viktigheten av å be om hjelp når livet blir tungt.
-
       <br><br>
-
       Gjennom ekte historier fortalt av kjente og mindre kjente personer, ønsker filmen å vise at ingen står alene i møte med sorg, kriser eller uventede hendelser.
-
       <br><br>
-
       Prosjektet skapes i samarbeid med ulike bidragsytere og støttespillere, og målet er å øke bevisstheten rundt mental helse og gjøre det enklere å finne riktig hjelp – både i hverdagen og i akutte situasjoner.
     </p>
 
@@ -71,7 +70,8 @@
   <div>Laget med ❤️ i Norge</div>
 </footer>
 
-<!-- ✅ UNIVERSAL BURGER + ANIMATION SCRIPT -->
+
+<!-- ✅ ЕДИНЫЙ ПРАВИЛЬНЫЙ BURGER SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger-btn");
@@ -79,11 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (burger && mobileNav) {
     burger.addEventListener("click", function () {
-      this.classList.toggle("active");
+      burger.classList.toggle("active");
       mobileNav.classList.toggle("show");
     });
 
-    // Auto close when user clicks a link
+    // Закрытие по клику на ссылку
     const links = mobileNav.querySelectorAll("a");
     links.forEach(link => {
       link.addEventListener("click", () => {
