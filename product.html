@@ -9,19 +9,6 @@
 
 <body>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const burger = document.getElementById("burger-btn");
-    const mobileNav = document.getElementById("mobile-nav");
-
-    if (burger && mobileNav) {
-      burger.addEventListener("click", () => {
-        mobileNav.classList.toggle("show");
-      });
-    }
-  });
-</script>
-
 <header class="header">
   <div class="header-inner">
 
@@ -31,39 +18,41 @@
       <a href="index.html">Hjem</a>
       <a href="product.html" class="active">Nettbutikk</a>
       <a href="film.html">Film</a>
-      <a href="index.html#kontakt">Kontakt</a>
+      <a href="#footer-kontakt">Kontakt</a>
     </nav>
 
-    <button id="burger-btn" class="burger-btn">☰</button>
+    <!-- BURGER -->
+    <button id="burger-btn" class="burger-btn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
   </div>
 
   <nav id="mobile-nav" class="mobile-nav">
     <a href="index.html">Hjem</a>
-    <a href="product.html" class="active">Nettbutikk</a>
+    <a href="product.html">Nettbutikk</a>
     <a href="film.html">Film</a>
-    <a href="index.html#kontakt">Kontakt</a>
+    <a href="#footer-kontakt">Kontakt</a>
   </nav>
 </header>
 
-
 <main class="container">
 
-  <!-- ДОБАВЛЕН ОТСТУП ОТ HEADER -->
-  <section class="product-section" style="padding-top: 40px;">
+  <section class="product-section">
 
     <div class="product-card">
 
-      <!-- КАРТИНКА ЦЕНТРИРУЕТСЯ НА МОБИЛЬНЫХ -->
-      <div class="product-image" style="text-align: center;">
+      <div class="product-image">
         <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet">
       </div>
 
-      <div class="product-info">
+      <div class="product-info center">
         <h1>Sikkerhetsmagnet</h1>
 
         <p>
-          En stilren kjøleskapsmagnet med Norges viktigste nødnummer og mental helsehjelp — alltid synlig og alltid innen rekkevidde.
+          En stilren kjøleskapsmagnet med Norges viktigste nødnummer og mental helsehjelp — alltid synlig.
         </p>
 
         <div class="price">200 kr</div>
@@ -77,11 +66,27 @@
 
 </main>
 
-<footer class="footer">
+
+<footer class="footer" id="footer-kontakt">
   <div>© psykeub | Ungdomsbedrift 2025</div>
-  <div>Kontakt oss: psykeub@gmail.com</div>
+  <div><strong>Kontakt oss:</strong> psykeub@gmail.no</div>
   <div>Laget med ❤️ i Norge</div>
 </footer>
+
+<!-- ✅ ONE UNIVERSAL BURGER SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burger-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  if (burger && mobileNav) {
+    burger.addEventListener("click", function () {
+      mobileNav.classList.toggle("show");
+      burger.classList.toggle("active");
+    });
+  }
+});
+</script>
 
 </body>
 </html>
