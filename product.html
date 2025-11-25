@@ -5,63 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nettbutikk – Sikkerhetsmagnet</title>
   <link rel="stylesheet" href="css/styles.css">
-
-  <style>
-    /* --- BURGER ANIMATION --- */
-    .burger-btn {
-      width: 34px;
-      height: 24px;
-      position: relative;
-    }
-
-    .burger-btn span {
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      background: black;
-      left: 0;
-      transition: 0.3s;
-    }
-
-    .burger-btn span:nth-child(1) { top: 0; }
-    .burger-btn span:nth-child(2) { top: 10px; }
-    .burger-btn span:nth-child(3) { top: 20px; }
-
-    .burger-btn.active span:nth-child(1) {
-      transform: rotate(45deg);
-      top: 10px;
-    }
-
-    .burger-btn.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .burger-btn.active span:nth-child(3) {
-      transform: rotate(-45deg);
-      top: 10px;
-    }
-
-    /* --- MOBILE FIX FOR PRODUCT PAGE --- */
-    @media (max-width: 768px) {
-      main {
-        padding-top: 25px;
-      }
-
-      .product-card {
-        text-align: center;
-        align-items: center;
-      }
-
-      .product-info {
-        text-align: center;
-      }
-
-      .product-image img {
-        margin: 0 auto;
-        display: block;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -69,17 +12,17 @@
 <header class="header">
   <div class="header-inner">
     
-    <div class="logo desktop-logo">psykeub</div>
+    <div class="logo">psykeub</div>
 
     <nav class="nav desktop-nav">
       <a href="index.html">Hjem</a>
-      <a href="product.html" class="active">Nettbutikk</a>
+      <a href="product.html">Nettbutikk</a>
       <a href="film.html">Film</a>
-      <a href="index.html#kontakt">Kontakt</a>
+      <a href="#footer-contact">Kontakt</a>
     </nav>
 
-    <!-- FIXED BURGER -->
-    <button id="burger-btn" class="burger-btn" aria-label="Menu">
+    <!-- ✅ БУРГЕР ТАКОЙ ЖЕ КАК НА ГЛАВНОЙ -->
+    <button class="burger-btn" id="burger-btn">
       <span></span>
       <span></span>
       <span></span>
@@ -91,9 +34,10 @@
     <a href="index.html">Hjem</a>
     <a href="product.html">Nettbutikk</a>
     <a href="film.html">Film</a>
-    <a href="index.html#kontakt">Kontakt</a>
+    <a href="#footer-contact">Kontakt</a>
   </nav>
 </header>
+
 
 <main class="container">
 
@@ -105,7 +49,7 @@
         <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet">
       </div>
 
-      <div class="product-info">
+      <div class="product-info center">
         <h1>Sikkerhetsmagnet</h1>
 
         <p>
@@ -123,12 +67,13 @@
 
 </main>
 
-<footer class="footer">
+<footer class="footer" id="footer-contact">
   <div>© psykeub | Ungdomsbedrift 2025</div>
+  <div>Kontakt oss: psykeub@gmail.no</div>
   <div>Laget med ❤️ i Norge</div>
 </footer>
 
-<!-- ✅ FIXED + ANIMATED BURGER SCRIPT -->
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger-btn");
@@ -136,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (burger && mobileNav) {
     burger.addEventListener("click", function () {
-      burger.classList.toggle("active"); // animation
+      burger.classList.toggle("active");
       mobileNav.classList.toggle("show");
     });
   }
