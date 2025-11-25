@@ -9,47 +9,57 @@
 
 <body>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.getElementById("burger-btn");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    if (burger && mobileNav) {
+      burger.addEventListener("click", () => {
+        mobileNav.classList.toggle("show");
+      });
+    }
+  });
+</script>
+
 <header class="header">
   <div class="header-inner">
-    
-    <div class="logo">psykeub</div>
+
+    <div class="logo desktop-logo">psykeub</div>
 
     <nav class="nav desktop-nav">
       <a href="index.html">Hjem</a>
-      <a href="product.html">Nettbutikk</a>
+      <a href="product.html" class="active">Nettbutikk</a>
       <a href="film.html">Film</a>
-      <a href="#footer-contact">Kontakt</a>
+      <a href="index.html#kontakt">Kontakt</a>
     </nav>
 
-    <!-- ✅ БУРГЕР ТАКОЙ ЖЕ КАК НА ГЛАВНОЙ -->
-    <button class="burger-btn" id="burger-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <button id="burger-btn" class="burger-btn">☰</button>
 
   </div>
 
   <nav id="mobile-nav" class="mobile-nav">
     <a href="index.html">Hjem</a>
-    <a href="product.html">Nettbutikk</a>
+    <a href="product.html" class="active">Nettbutikk</a>
     <a href="film.html">Film</a>
-    <a href="#footer-contact">Kontakt</a>
+    <a href="index.html#kontakt">Kontakt</a>
   </nav>
 </header>
 
 
 <main class="container">
 
-  <section class="product-section">
+  <!-- ДОБАВЛЕН ОТСТУП ОТ HEADER -->
+  <section class="product-section" style="padding-top: 40px;">
 
     <div class="product-card">
 
-      <div class="product-image">
+      <!-- КАРТИНКА ЦЕНТРИРУЕТСЯ НА МОБИЛЬНЫХ -->
+      <div class="product-image" style="text-align: center;">
         <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet">
       </div>
 
-      <div class="product-info center">
+      <div class="product-info">
         <h1>Sikkerhetsmagnet</h1>
 
         <p>
@@ -67,26 +77,11 @@
 
 </main>
 
-<footer class="footer" id="footer-contact">
+<footer class="footer">
   <div>© psykeub | Ungdomsbedrift 2025</div>
-  <div>Kontakt oss: psykeub@gmail.no</div>
+  <div>Kontakt oss: psykeub@gmail.com</div>
   <div>Laget med ❤️ i Norge</div>
 </footer>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burger-btn");
-  const mobileNav = document.getElementById("mobile-nav");
-
-  if (burger && mobileNav) {
-    burger.addEventListener("click", function () {
-      burger.classList.toggle("active");
-      mobileNav.classList.toggle("show");
-    });
-  }
-});
-</script>
 
 </body>
 </html>
