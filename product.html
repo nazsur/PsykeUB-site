@@ -9,40 +9,21 @@
 
 <body>
 
-  <!-- BURGER SCRIPT (универсальный) -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const burger = document.getElementById("burger-btn");
-      const mobileNav = document.getElementById("mobile-nav");
-
-      if (burger && mobileNav) {
-        burger.addEventListener("click", () => {
-          mobileNav.classList.toggle("show");
-        });
-      }
-    });
-  </script>
-
 <header class="header">
   <div class="header-inner">
-    
-    <!-- ЛОГО ВЛЕВО -->
+
     <div class="logo desktop-logo">psykeub</div>
 
-    <!-- Навигация -->
     <nav class="nav desktop-nav">
       <a href="index.html">Hjem</a>
-      <a href="product.html">Nettbutikk</a>
+      <a href="product.html" class="active">Nettbutikk</a>
       <a href="film.html">Film</a>
       <a href="index.html#kontakt">Kontakt</a>
     </nav>
 
-    <!-- Бургер -->
     <button id="burger-btn" class="burger-btn">☰</button>
-
   </div>
 
-  <!-- Мобильное меню -->
   <nav id="mobile-nav" class="mobile-nav">
     <a href="index.html">Hjem</a>
     <a href="product.html">Nettbutikk</a>
@@ -51,19 +32,16 @@
   </nav>
 </header>
 
-
- <main class="container">
+<main class="container">
 
   <section class="product-section">
 
     <div class="product-card">
 
-      <!-- Фото -->
       <div class="product-image">
         <img src="magnet_psykeUB.jpg" alt="Sikkerhetsmagnet">
       </div>
 
-      <!-- Текст -->
       <div class="product-info">
         <h1>Sikkerhetsmagnet</h1>
 
@@ -82,26 +60,21 @@
 
 </main>
 
+<footer class="footer">
+  <div>© psykeub | Ungdomsbedrift 2025</div>
+  <div>Laget med ❤️ i Norge</div>
+</footer>
 
-  <footer class="footer">
-    <div>© psykeub | Ungdomsbedrift 2025</div>
-    <div>Laget med ❤️ i Norge</div>
-  </footer>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger-btn");
   const mobileNav = document.getElementById("mobile-nav");
 
-  if (burger && mobileNav) {
-    burger.addEventListener("click", () => {
-      mobileNav.classList.toggle("show");
-    });
-  }
+  burger.addEventListener("click", function () {
+    mobileNav.classList.toggle("show");
+  });
 });
 </script>
 
 </body>
 </html>
-
-
-
