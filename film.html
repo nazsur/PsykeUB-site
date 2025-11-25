@@ -9,30 +9,34 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-
-    <!-- Logo -->
+    
     <div class="logo desktop-logo">psykeub</div>
 
-    <!-- Desktop Nav -->
     <nav class="nav desktop-nav">
       <a href="index.html">Hjem</a>
       <a href="product.html">Nettbutikk</a>
       <a href="film.html" class="active">Film</a>
-      <a href="index.html#kontakt">Kontakt</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
 
-    <!-- Burger -->
-    <button id="burger-btn" class="burger-btn">☰</button>
+    <!-- BURGER -->
+    <button id="burger-btn" class="burger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
   </div>
 
-  <!-- Mobile Navigation -->
+  <!-- MOBILE NAV -->
   <nav id="mobile-nav" class="mobile-nav">
     <a href="index.html">Hjem</a>
     <a href="product.html">Nettbutikk</a>
-    <a href="film.html" class="active">Film</a>
-    <a href="index.html#kontakt">Kontakt</a>
+    <a href="film.html">Film</a>
+    <a href="#kontakt">Kontakt</a>
   </nav>
 </header>
 
@@ -46,9 +50,13 @@
 
     <p class="film-text">
       Kortfilmen vår handler om hvordan mennesker i Norge opplever tap, psykisk helse og viktigheten av å be om hjelp når livet blir tungt.
+
       <br><br>
+
       Gjennom ekte historier fortalt av kjente og mindre kjente personer, ønsker filmen å vise at ingen står alene i møte med sorg, kriser eller uventede hendelser.
+
       <br><br>
+
       Prosjektet skapes i samarbeid med ulike bidragsytere og støttespillere, og målet er å øke bevisstheten rundt mental helse og gjøre det enklere å finne riktig hjelp – både i hverdagen og i akutte situasjoner.
     </p>
 
@@ -56,24 +64,36 @@
 
 </main>
 
-<footer class="footer">
+<!-- FOOTER -->
+<footer class="footer" id="kontakt">
   <div>© psykeub | Ungdomsbedrift 2025</div>
   <div>Kontakt oss: psykeub@gmail.no</div>
   <div>Laget med ❤️ i Norge</div>
 </footer>
 
-<!-- ✅ WORKING BURGER SCRIPT — ТОЛЬКО ОДИН -->
+<!-- ✅ UNIVERSAL BURGER + ANIMATION SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger-btn");
   const mobileNav = document.getElementById("mobile-nav");
 
-  burger.addEventListener("click", function () {
-    mobileNav.classList.toggle("show");
-  });
+  if (burger && mobileNav) {
+    burger.addEventListener("click", function () {
+      this.classList.toggle("active");
+      mobileNav.classList.toggle("show");
+    });
+
+    // Auto close when user clicks a link
+    const links = mobileNav.querySelectorAll("a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        burger.classList.remove("active");
+        mobileNav.classList.remove("show");
+      });
+    });
+  }
 });
 </script>
 
 </body>
 </html>
-
