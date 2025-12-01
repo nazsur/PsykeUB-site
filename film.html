@@ -1,38 +1,39 @@
 <!doctype html>
 <html lang="nb">
 <head>
-  <meta name="description" content="PsykeUBs kortfilm om tap, mental helse og viktigheten av å be om hjelp.">
-<meta name="keywords" content="kortfilm, mental helse film, psykeub, norsk dokumentar">
-<meta property="og:title" content="PsykeUB – Kortfilm">
-<meta property="og:description" content="En kortfilm om mental helse, tap og håp.">
-<meta property="og:image" content="https://psykeub.no/magnet_psykeUB.jpg">
-<meta property="og:url" content="https://psykeub.no/film.html">
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Film – psykeub</title>
-  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Vår film – PsykeUB</title>
+  <meta name="description" content="Se vår kortfilm om mental helse, trygghet og hvorfor PsykeUB laget sikkerhetsmagneten." />
+  <meta name="keywords" content="psykeub film, mental helse video, ungdomsbedrift, kortfilm psykisk helse" />
+  <meta name="author" content="PsykeUB" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Vår film – PsykeUB" />
+  <meta property="og:description" content="En kortfilm om mental helse og trygghet i hverdagen." />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:url" content="https://psykeub.no/film.html" />
+  <meta property="og:image" content="https://psykeub.no/magnet_psykeUB.jpg" />
+
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
 
-    <!-- ЛОГО -->
-    <div class="logo desktop-logo">psykeub</div>
+    <div class="logo desktop-logo">PsykeUB</div>
 
-    <!-- NAV (DESKTOP) -->
     <nav class="nav desktop-nav">
       <a href="index.html">Hjem</a>
       <a href="product.html">Nettbutikk</a>
       <a href="film.html" class="active">Film</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#footer-kontakt">Kontakt</a>
     </nav>
 
-    <!-- BURGER -->
-    <button id="burger-btn" class="burger-btn" aria-label="Menu">
+    <button id="burger-btn" class="burger-btn">
       <span></span>
       <span></span>
       <span></span>
@@ -40,45 +41,36 @@
 
   </div>
 
-  <!-- MOBILE NAV -->
   <nav id="mobile-nav" class="mobile-nav">
     <a href="index.html">Hjem</a>
     <a href="product.html">Nettbutikk</a>
     <a href="film.html">Film</a>
-    <a href="#kontakt">Kontakt</a>
+    <a href="#footer-kontakt">Kontakt</a>
   </nav>
 </header>
 
-
 <main class="container">
 
-  <section class="film-page">
-
-    <h1>Kortfilm</h1>
-
-    <div class="video-placeholder large">Video kommer snart</div>
-
-    <p class="film-text">
-      Kortfilmen vår handler om hvordan mennesker i Norge opplever tap, psykisk helse og viktigheten av å be om hjelp når livet blir tungt.
-      <br><br>
-      Gjennom ekte historier fortalt av kjente og mindre kjente personer, ønsker filmen å vise at ingen står alene i møte med sorg, kriser eller uventede hendelser.
-      <br><br>
-      Prosjektet skapes i samarbeid med ulike bidragsytere og støttespillere, og målet er å øke bevisstheten rundt mental helse og gjøre det enklere å finne riktig hjelp – både i hverdagen og i akutte situasjoner.
+  <section class="film-section">
+    <h1>Vår kortfilm</h1>
+    <p>
+      Denne filmen viser hvorfor PsykeUB ble startet og hvor viktig det er å ha rask tilgang til hjelp i krise.
     </p>
 
+    <div class="video-wrapper">
+      <!-- ВСТАВЬ ТУТ СВОЁ ВИДЕО (YouTube / mp4) -->
+      <div class="video-placeholder">VIDEO KOMMER HER</div>
+    </div>
   </section>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="footer" id="kontakt">
-  <div>© psykeub | Ungdomsbedrift 2025</div>
+<footer class="footer" id="footer-kontakt">
+  <div>© PsykeUB | Ungdomsbedrift 2025</div>
   <div><strong>Kontakt oss:</strong> psykeub@gmail.no</div>
   <div>Laget med ❤️ i Norge</div>
 </footer>
 
-
-<!-- ✅ ЕДИНЫЙ ПРАВИЛЬНЫЙ BURGER SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger-btn");
@@ -86,17 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (burger && mobileNav) {
     burger.addEventListener("click", function () {
-      burger.classList.toggle("active");
       mobileNav.classList.toggle("show");
-    });
-
-    // Закрытие по клику на ссылку
-    const links = mobileNav.querySelectorAll("a");
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        burger.classList.remove("active");
-        mobileNav.classList.remove("show");
-      });
+      burger.classList.toggle("active");
     });
   }
 });
@@ -104,5 +87,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 </html>
-
-
