@@ -430,3 +430,43 @@ a{text-decoration:none;color:inherit}
     display: none;
   }
 }
+
+/* --- OM OSS SECTION --- */
+
+.omoss-container {
+  width: 100%;
+  padding: 80px 20px; /* такие же боковые отступы, как у hero */
+  display: flex;
+  justify-content: center;
+}
+
+.omoss-inner {
+  max-width: 900px; /* ширина текста как у hero */
+}
+
+.omoss-title {
+  font-size: 36px;       /* увеличенный заголовок */
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #0a1a44;        /* тот же цвет что у других h */
+}
+
+.omoss-inner p {
+  font-size: 18px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+/* Центровка кнопки на мобилках */
+@media (max-width: 800px) {
+  .omoss-title {
+    text-align: center;
+  }
+  .omoss-inner p {
+    text-align: center;
+  }
+  .omoss-inner .cta-btn {
+    display: block;
+    margin: 20px auto 0;
+  }
+}
