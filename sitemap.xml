@@ -14,9 +14,11 @@
   </url>
 
   <url>
-    <loc>https://psykeub.no/film.html</loc>
+    <loc>https://psykeub.no/om-oss.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
+
+
