@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Om oss – PsykeUB</title>
+  <meta name="description" content="Om oss – PsykeUB, ungdomsbedriften som jobber for bedre mental helse og trygghet gjennom en praktisk sikkerhetsmagnet." />
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon_64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_180.png">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+
+    <div class="logo">PsykeUB</div>
+
+    <nav class="nav desktop-nav">
+      <a href="index.html">Hjem</a>
+      <a href="product.html">Nettbutikk</a>
+      <a href="om-oss.html" class="active">Om oss</a>
+      <a href="#footer-contact">Kontakt</a>
+    </nav>
+
+    <button class="burger-btn" id="burger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <nav id="mobile-nav" class="mobile-nav">
+    <a href="index.html">Hjem</a>
+    <a href="product.html">Nettbutikk</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="#footer-contact">Kontakt</a>
+  </nav>
+</header>
+
+
+<main class="container">
+
+  <section class="about-section">
+    <h1>Om oss</h1>
+    <p>
+      Vi er PsykeUB – en ungdomsbedrift som brenner for mental helse,
+      trygghet og tilgjengelig hjelp når man trenger det som mest.
+    </p>
+
+    <p>
+      Vårt mål er å gjøre Norges viktigste nødnumre og hjelpelinjer
+      lett tilgjengelig for alle. Derfor utviklet vi en praktisk magnet
+      som kan festes på kjøleskapet, slik at hele familien har rask tilgang
+      til kritisk informasjon.
+    </p>
+
+    <h2>Hvorfor vi startet PsykeUB</h2>
+    <p>
+      Mental helse påvirker alle, uansett alder. Vi så at mange ikke kjenner
+      nødnumrene eller hvem man kan ringe i en vanskelig situasjon.
+      Derfor ønsket vi å lage et produkt som både er enkelt, nyttig og trygt.
+    </p>
+
+    <h2>Teamet vårt</h2>
+    <ul>
+      <li><strong>[Navn 1]</strong> – Daglig leder</li>
+      <li><strong>[Navn 2]</strong> – Markedsføring</li>
+      <li><strong>[Navn 3]</strong> – Økonomi</li>
+      <li><strong>Nazar</strong> – Webutvikling & design</li>
+    </ul>
+
+    <p>
+      Takk for at du støtter vårt arbeid. Sammen kan vi skape et tryggere Norge ❤️
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer class="footer" id="footer-contact">
+  <div>© PsykeUB | Ungdomsbedrift 2025</div>
+  <div><strong>Kontakt oss:</strong> psykeub@gmail.no</div>
+  <div>Laget med ❤️ i Norge</div>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burger-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("active");
+    mobileNav.classList.toggle("show");
+  });
+});
+</script>
+
+</body>
+</html>
