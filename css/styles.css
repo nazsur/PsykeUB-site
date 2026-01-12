@@ -346,4 +346,15 @@ a{text-decoration:none;color:inherit}
   }
 }
 
+/* BRAND BACKGROUND */
+main {
+  background: #f1ecf9; /* светло-фиолетовый */
+  padding-bottom: 80px;
+}
+
+/* Header in brand color */
+.header {
+  background: #f1ecf9;
+}
+
 
