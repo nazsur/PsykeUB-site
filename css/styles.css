@@ -1,7 +1,3 @@
-/* ======================================================
-   GLOBAL BASE STYLES
-   ====================================================== */
-
 :root{
   --accent:#0a57e0;
   --accent-dark:#063fa8;
@@ -11,106 +7,59 @@
   --radius:14px;
 }
 
+/* BASE */
 *{box-sizing:border-box}
-html,body{height:100%}
 body{
   margin:0;
-  font-family:"Inter",system-ui,Arial;
+  font-family:Inter,system-ui,Arial;
   background:var(--bg);
   color:#0b1220;
   line-height:1.45;
 }
-
 a{text-decoration:none;color:inherit}
 
-/* ======================================================
-   CONTAINER (USED ON NORMAL PAGES ONLY)
-   ====================================================== */
-
-.container{
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 28px;
-}
-
-/* ======================================================
-   HEADER
-   ====================================================== */
-
+/* HEADER */
 .header{
   position:sticky;
   top:0;
-  background:var(--card-bg);
+  background:#fff;
   border-bottom:1px solid rgba(0,0,0,.08);
   z-index:200;
 }
-
 .header-inner{
   max-width:1300px;
   margin:0 auto;
   padding:18px 20px;
   display:flex;
   align-items:center;
-  gap:24px;
 }
-
 .logo{
   font-weight:800;
   font-size:28px;
   color:var(--accent);
   margin-right:auto;
 }
-
 .desktop-nav{
   display:flex;
   gap:30px;
 }
-
-.desktop-nav a{
-  font-size:17px;
-}
-
 .desktop-nav a.active{
   color:var(--accent);
   font-weight:700;
 }
-
-.burger-btn{
-  display:none;
-  background:none;
-  border:0;
-  cursor:pointer;
-}
-
+.burger-btn{display:none;background:none;border:0}
 .burger-btn span{
-  display:block;
-  width:28px;
-  height:3px;
-  background:var(--accent);
-  margin:6px 0;
-  transition:.3s;
+  display:block;width:28px;height:3px;
+  background:var(--accent);margin:6px 0;
 }
-
-.mobile-nav{
-  display:none;
-  flex-direction:column;
-  gap:16px;
-  padding:20px;
-  background:var(--card-bg);
-  border-top:1px solid rgba(0,0,0,.08);
-}
-
-.mobile-nav.show{display:flex}
-
+.mobile-nav{display:none;padding:20px}
+.mobile-nav.show{display:block}
 @media(max-width:900px){
   .desktop-nav{display:none}
   .burger-btn{display:block}
 }
 
-/* ======================================================
-   BUTTONS
-   ====================================================== */
-
+/* BUTTONS */
 .cta-btn{
   display:inline-block;
   background:var(--accent);
@@ -119,56 +68,20 @@ a{text-decoration:none;color:inherit}
   border-radius:12px;
   font-weight:600;
   box-shadow:0 8px 22px rgba(10,85,224,.12);
-  transition:.15s;
 }
-
-.cta-btn:hover{transform:translateY(-2px)}
-
 .cta-btn.secondary{
   background:transparent;
   color:var(--accent);
   border:2px solid var(--accent);
-  box-shadow:none;
 }
 
-/* ======================================================
-   FOOTER
-   ====================================================== */
-
-.footer{
-  background:var(--card-bg);
-  padding:40px 20px;
-  border-top:1px solid rgba(0,0,0,.06);
-  text-align:center;
-  margin-top:80px;
-  color:var(--muted);
+/* PRODUCT PAGE BACKGROUND */
+.product-page{
+  background:#f1ecf9;
+  padding-bottom:80px;
 }
 
-.footer .sosial a{
-  color:var(--accent);
-  font-weight:600;
-}
-
-/* ======================================================
-   PRODUCT PAGE — POWER / ELKJØP LAYOUT
-   ====================================================== */
-
-.product-image img{
-  width:360px;
-  border-radius:14px;
-}
-
-.product-info h1{
-  font-size:32px;
-  margin-bottom:10px;
-}
-
-.price{
-  font-size:28px;
-  font-weight:700;
-}
-
-/* GRID */
+/* PRODUCT GRID */
 .product-layout{
   max-width:1100px;
   margin:80px auto;
@@ -177,207 +90,85 @@ a{text-decoration:none;color:inherit}
   gap:70px;
 }
 
-/* STICKY IMAGE */
-.product-layout > .product-image{
-  position:sticky;
-  top:120px;
-  align-self:flex-start;
-}
-
-/* CONTENT */
-.product-main section{
-  margin-bottom:50px;
-}
-
-.product-main h2{
-  font-size:28px;
-  margin-bottom:14px;
-}
-
-.product-main p{
-  font-size:17px;
-  color:var(--muted);
-  max-width:800px;
-}
-
-/* LISTS */
-.product-main ul,
-.product-side ul{
-  list-style:none;
-  padding:0;
-}
-
-.product-main li,
-.product-side li{
-  padding:10px 0;
-  border-bottom:1px solid rgba(0,0,0,.08);
-  font-size:17px;
-}
-
-.product-main li::before{
-  content:"•";
-  color:var(--accent);
-  margin-right:8px;
-}
-
-/* SIDE PANEL */
-.product-side{
-  position:sticky;
-  top:120px;
-  background:var(--card-bg);
-  padding:24px;
-  border-radius:16px;
-  box-shadow:0 12px 30px rgba(0,0,0,.06);
-}
-
-.product-side h3{
-  font-size:22px;
-  margin-bottom:12px;
-}
-
-.product-side h4{
-  margin-top:20px;
-}
-
-/* VIPPS */
-.vipps-info{
-  font-size:15px;
-  margin-top:12px;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-  .product-card{
-    flex-direction:column;
-    padding:20px;
-  }
-
-  .product-image img{
-    width:100%;
-    max-width:300px;
-    margin:auto;
-  }
-
-  .product-layout{
-    grid-template-columns:1fr;
-  }
-
-  .product-image,
-  .product-side{
-    position:static;
-  }
-
-  .cta-btn{
-    width:100%;
-    text-align:center;
-  }
-}
-
-.product-layout{
-  padding-top:40px;
-}
-
-/* ===============================
-   POWER / ELKJØP PRODUCT PAGE
-   =============================== */
-
-.product-layout{
-  max-width:1100px;
-  margin:80px auto;
-  display:grid;
-  grid-template-columns:420px 1fr;
-  gap:70px;
-}
-
-/* Sticky image */
+/* IMAGE */
 .product-layout > .product-image{
   position:sticky;
   top:120px;
 }
-
 .product-image img{
   width:100%;
   border-radius:16px;
   box-shadow:0 18px 40px rgba(0,0,0,.08);
 }
 
-/* Right content */
-.product-main h1{
-  font-size:36px;
-  margin-bottom:6px;
+/* GALLERY */
+.product-gallery{
+  display:flex;
+  gap:10px;
+  margin-top:14px;
+}
+.product-gallery img{
+  width:70px;
+  border-radius:8px;
+  opacity:.8;
 }
 
-.price{
-  font-size:28px;
-  font-weight:700;
-}
-
-.subtitle{
-  color:var(--muted);
-  margin-bottom:30px;
-}
-
-.product-main section{
-  margin-bottom:40px;
-}
-
+/* CONTENT */
+.product-main h1{font-size:38px}
+.price{font-size:28px;font-weight:700}
+.subtitle{color:var(--muted);margin-bottom:30px}
+.product-main section{margin-bottom:40px}
 .product-main ul{
-  list-style:none;
-  padding:0;
+  list-style:none;padding:0
 }
-
 .product-main li{
   padding:10px 0;
   border-bottom:1px solid rgba(0,0,0,.08);
 }
 
-.vipps-info{
-  margin-top:10px;
+/* BETALING */
+.betaling{
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+.vipps-info{margin-top:12px}
+.small-note{font-size:14px;color:#666}
+
+/* KONTAKT */
+.kontakt{
+  max-width:700px;
+  margin:80px auto 0;
+  padding:40px 28px;
+  background:#fff;
+  border-radius:16px;
+  border-top:4px solid var(--accent);
+  text-align:center;
 }
 
-/* Mobile */
+/* FOOTER */
+.footer{
+  background:#fff;
+  padding:40px 20px;
+  text-align:center;
+  color:var(--muted);
+}
+.footer .sosial a{
+  color:var(--accent);
+  font-weight:600;
+}
+
+/* MOBILE */
 @media(max-width:900px){
   .product-layout{
     grid-template-columns:1fr;
   }
-
   .product-layout > .product-image{
     position:static;
   }
+  .cta-btn{
+    width:100%;
+    text-align:center;
+  }
 }
-
-/* BRAND BACKGROUND */
-main {
-  background: #f1ecf9; /* светло-фиолетовый */
-  padding-bottom: 80px;
-}
-
-/* Header in brand color */
-.header {
-  background: #f1ecf9;
-}
-
-/* Product hero text */
-.product-main h1 {
-  font-size: 38px;
-  letter-spacing: -0.5px;
-}
-
-.price {
-  margin: 10px 0 18px;
-}
-
-/* First paragraph under price */
-.product-main > p {
-  font-size: 16px;
-  max-width: 420px;
-}
-/* Payment highlight */
-.product-main section:nth-of-type(4) {
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-}
-
-
