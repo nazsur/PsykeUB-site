@@ -357,4 +357,27 @@ main {
   background: #f1ecf9;
 }
 
+/* Product hero text */
+.product-main h1 {
+  font-size: 38px;
+  letter-spacing: -0.5px;
+}
+
+.price {
+  margin: 10px 0 18px;
+}
+
+/* First paragraph under price */
+.product-main > p {
+  font-size: 16px;
+  max-width: 420px;
+}
+/* Payment highlight */
+.product-main section:nth-of-type(4) {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
 
