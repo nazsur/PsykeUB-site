@@ -650,3 +650,41 @@ main section:last-of-type p {
   }
 }
 
+/* PRODUCT LAYOUT */
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 60px;
+  margin-top: 80px;
+}
+
+.product-side {
+  position: sticky;
+  top: 120px;
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.product-side h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.product-side h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-side {
+    position: static;
+  }
+}
+
