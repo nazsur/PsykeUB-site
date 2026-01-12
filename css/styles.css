@@ -277,4 +277,73 @@ a{text-decoration:none;color:inherit}
   padding-top:40px;
 }
 
+/* ===============================
+   POWER / ELKJØP PRODUCT PAGE
+   =============================== */
+
+.product-layout{
+  max-width:1100px;
+  margin:80px auto;
+  display:grid;
+  grid-template-columns:420px 1fr;
+  gap:70px;
+}
+
+/* Sticky image */
+.product-layout > .product-image{
+  position:sticky;
+  top:120px;
+}
+
+.product-image img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+/* Right content */
+.product-main h1{
+  font-size:36px;
+  margin-bottom:6px;
+}
+
+.price{
+  font-size:28px;
+  font-weight:700;
+}
+
+.subtitle{
+  color:var(--muted);
+  margin-bottom:30px;
+}
+
+.product-main section{
+  margin-bottom:40px;
+}
+
+.product-main ul{
+  list-style:none;
+  padding:0;
+}
+
+.product-main li{
+  padding:10px 0;
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.vipps-info{
+  margin-top:10px;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .product-layout{
+    grid-template-columns:1fr;
+  }
+
+  .product-layout > .product-image{
+    position:static;
+  }
+}
+
 
