@@ -83,16 +83,19 @@ a {
 }
 
 /* ======================================================
-   HEADER LOGO BANNER (LIKE 7STERKE)
+   HEADER LOGO BANNER — FULL WIDTH LIKE 7STERKE
    ====================================================== */
 
 .header-logo-banner {
   width: 100%;
-  background: var(--bg-lavender);
-  padding: 160px 20px;      /* ВАЖНО: большая высота */
-  text-align: center;
-  margin-top: -1px;         /* убираем микро-разрыв */
+  height: 420px;                 /* регулируй высоту тут */
+  background-color: var(--bg-lavender);
+  background-image: url("logo-psykeub.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;        /* 🔴 ВАЖНО: cover, НЕ contain */
 }
+
 
 /* ======================================================
    HEADER LOGO BANNER — FULL WIDTH (LIKE 7STERKE)
@@ -314,4 +317,5 @@ a {
     padding: 100px 20px;
   }
 }
+
 
