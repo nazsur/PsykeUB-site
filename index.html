@@ -13,77 +13,90 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
   <style>
+    /* =====================
+       VARIABLES
+       ===================== */
     :root {
-      --purple: #5a2d82;
-      --bg-light: #f4eefb;
+      --accent: #0a57e0;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --lavender: #f3eef9;
       --text: #0b1220;
-      --muted: #555;
+      --radius: 14px;
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Inter, system-ui, Arial;
+      background: var(--bg);
       color: var(--text);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =====================
+       HEADER (TOP BAR)
+       ===================== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
       background: #fff;
     }
 
-    a { text-decoration: none; color: inherit; }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
 
-    /* HEADER */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #fff;
-}
+    .logo-text {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+    }
 
-/* TOP BAR */
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 18px 24px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  border-bottom: 1px solid rgba(0,0,0,.08);
-}
+    .nav {
+      margin-left: auto;
+      display: flex;
+      gap: 28px;
+      font-size: 16px;
+    }
 
-/* TEXT LOGO */
-.logo-text {
-  font-size: 28px;
-  font-weight: 800;
-  color: #0a57e0; /* как на product */
-  text-decoration: none;
-}
+    .nav a.active {
+      font-weight: 700;
+      color: var(--accent);
+    }
 
-/* NAV */
-.nav {
-  margin-left: auto;
-  display: flex;
-  gap: 28px;
-}
+    /* =====================
+       LOGO BANNER (LIKE 7STERKE)
+       ===================== */
+    .header-logo-banner {
+      background: var(--lavender);
+      padding: 60px 20px 50px;
+      text-align: center;
+    }
 
-.nav a.active {
-  font-weight: 700;
-}
+    .header-logo-banner img {
+      max-width: 420px;
+      width: 100%;
+    }
 
-/* LOGO BANNER (как у 7STERKE) */
-.header-logo-banner {
-  background: #f4eefb; /* лаванда */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.header-logo-banner img {
-  max-width: 520px;
-  width: 100%;
-}
-
-    /* HERO */
+    /* =====================
+       HERO
+       ===================== */
     .hero {
-      background: var(--bg-light);
       padding: 100px 0;
+      margin-top: 40px;
     }
 
     .hero .container {
@@ -111,56 +124,31 @@
 
     .cta-btn {
       display: inline-block;
-      background: var(--purple);
-      color: #fff;
       padding: 16px 32px;
-      border-radius: 12px;
+      background: var(--accent);
+      color: #fff;
       font-weight: 600;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(10,87,224,.18);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
     }
 
     .hero img {
       width: 100%;
       border-radius: 18px;
-      box-shadow: 0 30px 60px rgba(0,0,0,.15);
       background: #fff;
       padding: 20px;
+      box-shadow: 0 30px 60px rgba(0,0,0,.15);
     }
 
-    /* OM OSS */
-    .omoss {
-      padding: 120px 0;
-      background: #fff;
-    }
-
-    .omoss .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .omoss img {
-      width: 100%;
-      border-radius: 16px;
-    }
-
-    .omoss h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .omoss p {
-      font-size: 17px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    /* FOOTER */
+    /* =====================
+       FOOTER
+       ===================== */
     footer {
-      background: var(--bg-light);
+      background: var(--lavender);
       padding: 80px 24px;
       margin-top: 120px;
     }
@@ -191,12 +179,11 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <!-- LOGO -->
-    <img src="logo-psykeub.jpg" alt="PsykeUB logo" class="logo-img">
+    <a href="index.html" class="logo-text">PsykeUB</a>
 
-    <!-- NAV -->
     <nav class="nav">
       <a href="index.html" class="active">Hjem</a>
       <a href="product.html">Nettbutikk</a>
@@ -206,6 +193,12 @@
   </div>
 </header>
 
+<!-- LOGO BANNER -->
+<div class="header-logo-banner">
+  <img src="logo-psykeub.jpg" alt="PsykeUB logo">
+</div>
+
+<!-- MAIN -->
 <main>
 
   <!-- HERO -->
@@ -224,28 +217,9 @@
     </div>
   </section>
 
-  <!-- OM OSS -->
-  <section class="omoss">
-    <div class="container">
-      <img src="team_psykeub.jpg" alt="PsykeUB team">
-
-      <div>
-        <h2>Om PsykeUB</h2>
-        <p>
-          PsykeUB er en ungdomsbedrift med et tydelig mål:
-          å gjøre viktig hjelp synlig før den trengs.
-        </p>
-        <p>
-          Vi utvikler enkle, fysiske produkter som bidrar til trygghet
-          og bedre psykisk helse i hverdagen.
-        </p>
-        <a href="om-oss.html" class="cta-btn">Les mer om oss</a>
-      </div>
-    </div>
-  </section>
-
 </main>
 
+<!-- FOOTER -->
 <footer id="footer">
   <div class="footer-inner">
     <div>
@@ -272,5 +246,3 @@
 
 </body>
 </html>
-
-
