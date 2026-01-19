@@ -1,171 +1,89 @@
 <!doctype html>
 <html lang="nb">
 <head>
-<!-- FAVICONS -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="/favicon_64.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon_180.png">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>PsykeUB – Kritisk hjelp alltid innen rekkevidde</title>
-  <meta name="description" content="PsykeUB lager sikkerhetsmagneter med Norges viktigste nødnummer og mental helsehjelp – alltid innen rekkevidde." />
-  <meta name="keywords" content="psykeub, nødnummer, sikkerhetsmagnet, psykisk helse, mental helsehjelp, 116 123, selvmordsforebygging norge" />
-  <meta name="author" content="PsykeUB" />
-  <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="PsykeUB – Kritisk hjelp alltid innen rekkevidde" />
-  <meta property="og:description" content="Sikkerhetsmagnet med Norges viktigste nødnummer og mental helsehjelp." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://psykeub.no/" />
-  <meta property="og:image" content="https://psykeub.no/magnet_psykeUB.jpg" />
+  <!-- FAVICONS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon_64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_180.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="PsykeUB – Kritisk hjelp" />
-  <meta name="twitter:description" content="Sikkerhetsmagnet med Norges viktigste nødnummer og mental helsehjelp." />
-  <meta name="twitter:image" content="https://psykeub.no/magnet_psykeUB.jpg" />
+  <style>
+    :root {
+      --purple: #5a2d82;
+      --bg-light: #f4eefb;
+      --text: #0b1220;
+      --muted: #555;
+    }
 
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, Arial;
+      color: var(--text);
+      background: #fff;
+    }
 
-<body>
+    a { text-decoration: none; color: inherit; }
 
-<header class="header">
-  <div class="header-inner">
-    
-    <a href="index.html" class="logo">PsykeUB</a>
+    /* HEADER */
+    .header {
+      background: #fff;
+      border-bottom: 1px solid rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-    <nav class="nav desktop-nav">
-      <a href="index.html" class="active">Hjem</a>
-      <a href="product.html">Nettbutikk</a>
-      <a href="om-oss.html">Om oss</a>
-      <a href="#footer-contact">Kontakt</a>
-    </nav>
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
 
-    <button class="burger-btn" id="burger-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    .logo-img {
+      height: 42px;
+    }
 
-  </div>
+    .nav {
+      margin-left: auto;
+      display: flex;
+      gap: 28px;
+      font-weight: 500;
+    }
 
-  <nav id="mobile-nav" class="mobile-nav">
-    <a href="index.html">Hjem</a>
-    <a href="product.html">Nettbutikk</a>
-    <a href="om-oss.html">Om oss</a>
-    <a href="#footer-contact">Kontakt</a>
-  </nav>
-</header>
+    .nav a.active {
+      color: var(--purple);
+      font-weight: 700;
+    }
 
-<main class="container">
+    /* HERO */
+    .hero {
+      background: var(--bg-light);
+      padding: 100px 0;
+    }
 
-  <!-- SECTION 1 -->
-  <section class="hero">
-    <div class="hero-left">
-      <h1 class="hero-title">Kritisk hjelp – alltid innen rekkevidde</h1>
-      <p class="hero-sub">
-        De viktigste norske nødnumrene og hjelpelinjen for mental helse — rett på kjøleskapet ditt.
-      </p>
+    .hero .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: center;
+    }
 
-      <div class="hero-cta">
-        <a class="cta-btn" href="product.html">Kjøp magneten</a>
-      </div>
-    </div>
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
 
-    <aside class="magnet-preview">
-      <img src="bilde.png" alt="Sikkerhetsmagnet med Norges nødnumre og mental helsehjelp" />
-    </aside>
-  </section>
-
-<!-- OM OSS SECTION -->
-<section class="omoss-section">
-  <div class="omoss-card">
-
-    <!-- LEFT: IMAGE -->
-    <div class="omoss-image">
-      <img src="team_psykeub.jpg" alt="Team PsykeUB" />
-    </div>
-
-    <!-- RIGHT: TEXT -->
-    <div class="omoss-info">
-      <h2>Om oss</h2>
-      <p>
-        Vi er PsykeUB – en ungdomsbedrift som jobber for å gjøre det enklere 
-        for alle å få rask tilgang til Norges viktigste nødnummer og mental helsehjelp.
-      </p>
-      <p>
-        Målet vårt er å skape trygghet i hverdagen og bidra til bedre psykisk helse, 
-        gjennom produkter som er synlige, tilgjengelige og nyttige for alle.
-      </p>
-
-      <a href="om-oss.html" class="cta-btn omoss-btn">Les mer om oss</a>
-    </div>
-
-  </div>
-</section>
-
-</main>
-
-<footer class="footer" id="footer-contact">
-
-  <div>© PsykeUB | Ungdomsbedrift 2025</div>
-
-  <div><strong>Kontakt oss:</strong> psykeub@gmail.no</div>
-
-  <div class="sosial">
-    <strong>Følg oss:</strong>
-
-    <a href="https://instagram.com/psyke.ub" target="_blank" rel="noopener">
-      Instagram
-    </a>
-
-    &nbsp;|&nbsp;
-
-    <a href="https://www.facebook.com/profile.php?id=61583964930550" target="_blank" rel="noopener">
-      Facebook
-    </a>
-  </div>
-
-  <div>Laget med ❤️ i Norge</div>
-
-</footer>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burger-btn");
-  const mobileNav = document.getElementById("mobile-nav");
-
-  if (burger && mobileNav) {
-    burger.addEventListener("click", function () {
-      burger.classList.toggle("active");
-      mobileNav.classList.toggle("show");
-    });
-  }
-});
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .hero p {
