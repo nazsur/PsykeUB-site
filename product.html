@@ -98,9 +98,41 @@
 </main>
 
 <footer class="footer" id="footer-contact">
+
   <div>© PsykeUB | Ungdomsbedrift 2025</div>
-  <div><strong>Kontakt:</strong> psykeub@gmail.no</div>
+
+  <div><strong>Kontakt oss:</strong> psykeub@gmail.no</div>
+
+  <div class="sosial">
+    <strong>Følg oss:</strong>
+
+    <a href="https://instagram.com/psyke.ub" target="_blank" rel="noopener">
+      Instagram
+    </a>
+
+    &nbsp;|&nbsp;
+
+    <a href="https://www.facebook.com/profile.php?id=61583964930550" target="_blank" rel="noopener">
+      Facebook
+    </a>
+  </div>
+
+  <div>Laget med ❤️ i Norge</div>
+
 </footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burger-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("active");
+    mobileNav.classList.toggle("show");
+  });
+});
+</script>
 
 </body>
 </html>
