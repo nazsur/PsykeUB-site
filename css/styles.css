@@ -214,6 +214,28 @@ a{
   }
 }
 
+/* ==============================
+   PRODUCT PAGE — VISUAL TWEAKS
+   ============================== */
+
+/* Больше воздуха сверху */
+.product-layout {
+  margin-top: 60px;
+}
+
+/* Усиленная цена */
+.price {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+/* Более тёплый подзаголовок */
+.subtitle {
+  color: #555;
+  max-width: 480px;
+}
+
 
 
 
