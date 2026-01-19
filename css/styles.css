@@ -289,3 +289,97 @@ a {
     text-align: center;
   }
 }
+
+/* ======================================================
+   COLORS
+   ====================================================== */
+
+:root {
+  --lavender: #f3eef9;      /* фон как у логотипа */
+  --purple: #5a2d82;        /* фирменный фиолетовый */
+  --text-dark: #0b1220;
+}
+
+/* ======================================================
+   GLOBAL
+   ====================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial;
+  color: var(--text-dark);
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ======================================================
+   HEADER (TOP BAR)
+   ====================================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--lavender); /* ← ОДИН ЦВЕТ с логобаннером */
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* TEXT LOGO (КЛИКАБЕЛЬНОЕ НАЗВАНИЕ) */
+.logo-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--purple);
+}
+
+/* NAV */
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
+  font-weight: 500;
+}
+
+.nav a.active {
+  font-weight: 700;
+}
+
+/* ======================================================
+   LOGO BANNER (как у 7STERKE)
+   ====================================================== */
+
+.header-logo-banner {
+  width: 100%;
+  background: var(--lavender);
+  padding: 120px 20px;      /* ← высота как у 7STERKE */
+  text-align: center;
+}
+
+.header-logo-banner img {
+  width: 100%;
+  max-width: 900px;         /* ← ВАЖНО: эффект "растянутого" лого */
+  height: auto;
+}
+
+/* ======================================================
+   MAIN CONTENT FIX
+   ====================================================== */
+
+main {
+  background: #ffffff;
+}
