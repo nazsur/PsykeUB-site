@@ -41,6 +41,11 @@ a{
   border-bottom: 1px solid var(--border-soft);
 }
 
+.header {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
 
 .header-inner{
   max-width:1300px;
@@ -208,6 +213,7 @@ a{
     text-align:center;
   }
 }
+
 
 
 
