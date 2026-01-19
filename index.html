@@ -87,3 +87,172 @@
     }
 
     .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--purple);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 30px 60px rgba(0,0,0,.15);
+      background: #fff;
+      padding: 20px;
+    }
+
+    /* OM OSS */
+    .omoss {
+      padding: 120px 0;
+      background: #fff;
+    }
+
+    .omoss .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .omoss img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .omoss h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .omoss p {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg-light);
+      padding: 80px 24px;
+      margin-top: 120px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <img src="logo_psykeub.png" alt="PsykeUB logo" class="logo-img">
+
+    <!-- NAV -->
+    <nav class="nav">
+      <a href="index.html" class="active">Hjem</a>
+      <a href="product.html">Nettbutikk</a>
+      <a href="om-oss.html">Om oss</a>
+      <a href="#footer">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div>
+        <h1>Kritisk hjelp<br>alltid innen rekkevidde</h1>
+        <p>
+          De viktigste norske nødnumrene og hjelpelinjen for mental helse –
+          samlet på én magnet, synlig i hverdagen.
+        </p>
+        <a href="product.html" class="cta-btn">Kjøp magneten</a>
+      </div>
+
+      <img src="bilde.png" alt="Sikkerhetsmagnet PsykeUB">
+    </div>
+  </section>
+
+  <!-- OM OSS -->
+  <section class="omoss">
+    <div class="container">
+      <img src="team_psykeub.jpg" alt="PsykeUB team">
+
+      <div>
+        <h2>Om PsykeUB</h2>
+        <p>
+          PsykeUB er en ungdomsbedrift med et tydelig mål:
+          å gjøre viktig hjelp synlig før den trengs.
+        </p>
+        <p>
+          Vi utvikler enkle, fysiske produkter som bidrar til trygghet
+          og bedre psykisk helse i hverdagen.
+        </p>
+        <a href="om-oss.html" class="cta-btn">Les mer om oss</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div>
+      <strong>Kontakt</strong>
+      psykeub@gmail.no
+    </div>
+
+    <div>
+      <strong>Følg oss</strong>
+      Instagram<br>
+      Facebook
+    </div>
+
+    <div>
+      <strong>PsykeUB</strong>
+      Ungdomsbedrift – 2025
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © PsykeUB | Laget med ❤️ i Norge
+  </div>
+</footer>
+
+</body>
+</html>
