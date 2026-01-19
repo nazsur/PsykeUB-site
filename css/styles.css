@@ -94,11 +94,20 @@ a {
   margin-top: -1px;         /* убираем микро-разрыв */
 }
 
-.header-logo-banner img {
+/* ======================================================
+   HEADER LOGO BANNER — FULL WIDTH (LIKE 7STERKE)
+   ====================================================== */
+
+.header-logo-banner {
   width: 100%;
-  max-width: 1000px;        /* ВАЖНО: широкий эффект */
-  height: auto;
+  height: 420px;                 /* высота как у 7STERKE */
+  background-color: var(--bg-lavender);
+  background-image: url("logo-psykeub.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;      /* ВАЖНО */
 }
+
 
 /* ======================================================
    HERO (MAIN PAGE)
@@ -305,3 +314,4 @@ a {
     padding: 100px 20px;
   }
 }
+
