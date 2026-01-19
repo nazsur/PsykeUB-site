@@ -36,13 +36,11 @@ a{
    HEADER
    ====================================================== */
 
-.header{
-  position:sticky;
-  top:0;
-  background:var(--card-bg);
-  border-bottom:1px solid rgba(0,0,0,.08);
-  z-index:200;
+.header {
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-soft);
 }
+
 
 .header-inner{
   max-width:1300px;
@@ -215,4 +213,5 @@ a{
     text-align:center;
   }
 }
+
 
