@@ -95,8 +95,8 @@ a{
    PRODUCT PAGE (POWER / ELKJØP STYLE)
    ====================================================== */
 
-.product-page{
-  padding:80px 0;
+.product-page {
+  background: transparent;
 }
 
 .product-layout{
@@ -213,5 +213,6 @@ a{
     text-align:center;
   }
 }
+
 
 
