@@ -31,38 +31,54 @@
     a { text-decoration: none; color: inherit; }
 
     /* HEADER */
-    .header {
-      background: #fff;
-      border-bottom: 1px solid rgba(0,0,0,.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+}
 
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+/* TOP BAR */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
 
-    .logo-img {
-      height: 42px;
-    }
+/* TEXT LOGO */
+.logo-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0a57e0; /* как на product */
+  text-decoration: none;
+}
 
-    .nav {
-      margin-left: auto;
-      display: flex;
-      gap: 28px;
-      font-weight: 500;
-    }
+/* NAV */
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
+}
 
-    .nav a.active {
-      color: var(--purple);
-      font-weight: 700;
-    }
+.nav a.active {
+  font-weight: 700;
+}
+
+/* LOGO BANNER (как у 7STERKE) */
+.header-logo-banner {
+  background: #f4eefb; /* лаванда */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.header-logo-banner img {
+  max-width: 520px;
+  width: 100%;
+}
 
     /* HERO */
     .hero {
@@ -256,4 +272,5 @@
 
 </body>
 </html>
+
 
