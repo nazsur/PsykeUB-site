@@ -1,50 +1,53 @@
 /* ======================================================
-   GLOBAL BASE STYLES
+   GLOBAL VARIABLES
    ====================================================== */
 
-:root{
-  --accent:#0a57e0;
-  --accent-dark:#063fa8;
-  --muted:#6b7280;
-  --bg:#f3eef9;
-  --card-bg:#ffffff;
-  --radius:14px;
+:root {
+  --accent: #0a57e0;
+  --accent-dark: #063fa8;
+  --muted: #6b7280;
+  --bg-page: #ffffff;
+  --bg-lavender: #f3eef9;
+  --card-bg: #ffffff;
+  --text-main: #0b1220;
+  --radius: 14px;
 }
 
-*{
-  box-sizing:border-box;
+/* ======================================================
+   RESET & BASE
+   ====================================================== */
+
+* {
+  box-sizing: border-box;
 }
 
-html,body{
-  height:100%;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: Inter, system-ui, Arial;
   background: var(--bg-page);
   color: var(--text-main);
 }
 
-
-a{
-  text-decoration:none;
-  color:inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ======================================================
-   HEADER
+   HEADER — TOP BAR
    ====================================================== */
 
-/* HEADER */
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
+  background: #ffffff;
 }
 
-/* TOP BAR */
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -55,12 +58,11 @@ a{
   border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
-/* TEXT LOGO */
+/* TEXT LOGO (PsykeUB) */
 .logo-text {
   font-size: 28px;
   font-weight: 800;
-  color: #0a57e0; /* как на product */
-  text-decoration: none;
+  color: var(--accent);
 }
 
 /* NAV */
@@ -68,196 +70,81 @@ a{
   margin-left: auto;
   display: flex;
   gap: 28px;
+  font-size: 16px;
 }
 
 .nav a.active {
   font-weight: 700;
+  color: var(--accent);
 }
 
-/* LOGO BANNER (как у 7STERKE) */
+/* ======================================================
+   HEADER LOGO BANNER (LIKE 7STERKE)
+   ====================================================== */
+
 .header-logo-banner {
-  background: #f4eefb; /* лаванда */
-  padding: 80px 20px;
+  background: var(--bg-lavender);
+  padding: 70px 20px 60px;
   text-align: center;
 }
 
 .header-logo-banner img {
-  max-width: 520px;
+  max-width: 420px;
   width: 100%;
 }
 
-
 /* ======================================================
-   BUTTONS
+   HERO (MAIN PAGE)
    ====================================================== */
 
-.cta-btn {
-  background: var(--primary);
-  color: #fff;
+.hero {
+  padding: 100px 0;
 }
 
-.cta-btn:hover {
-  background: var(--primary-soft);
+.hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
 }
 
-
-/* ======================================================
-   PRODUCT PAGE (POWER / ELKJØP STYLE)
-   ====================================================== */
-
-.product-page {
-  background: transparent;
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  margin-bottom: 20px;
 }
 
-.product-layout{
-  max-width:1200px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:460px 1fr;
-  gap:80px;
+.hero p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 36px;
 }
 
-/* LEFT — STICKY IMAGE */
-.product-media{
-  position:sticky;
-  top:120px;
-  align-self:flex-start;
-}
-
-.product-media img{
-  width:100%;
-  max-height:520px;
-  object-fit:contain;
-  background:#fff;
-  padding:16px;
-  border-radius:16px;
-  box-shadow:0 20px 40px rgba(0,0,0,.12);
-}
-
-/* RIGHT — CONTENT */
-.product-content h1{
-  font-size:36px;
-  margin-bottom:8px;
-}
-
-.price{
-  font-size:28px;
-  font-weight:700;
-  margin-bottom:10px;
-}
-
-.subtitle{
-  color:var(--muted);
-  margin-bottom:30px;
-}
-
-.product-content section{
-  margin-bottom:50px;
-}
-
-.product-content h2{
-  font-size:26px;
-  margin-bottom:12px;
-}
-
-.product-content p{
-  font-size:17px;
-  color:var(--muted);
-  max-width:800px;
-}
-
-.product-content ul{
-  list-style:none;
-  padding:0;
-}
-
-.product-content li{
-  padding:10px 0;
-  border-bottom:1px solid rgba(0,0,0,.08);
-  font-size:17px;
+.hero img {
+  width: 100%;
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.15);
 }
 
 /* ======================================================
-   FOOTER
+   CTA BUTTONS
    ====================================================== */
 
-.footer{
-  background:var(--card-bg);
-  padding:40px 20px;
-  border-top:1px solid rgba(0,0,0,.06);
-  text-align:center;
-  margin-top:80px;
-  color:var(--muted);
-}
-
-.footer .sosial{
-  margin-top:10px;
-}
-
-.footer .sosial a{
-  color:var(--accent);
-  font-weight:600;
-  margin:0 4px;
-}
-
-/* ======================================================
-   MOBILE
-   ====================================================== */
-
-@media(max-width:900px){
-  .product-layout{
-    grid-template-columns:1fr;
-  }
-
-  .product-media{
-    position:static;
-    margin-bottom:40px;
-  }
-
-  .product-content h1{
-    font-size:30px;
-  }
-
-  .cta-btn{
-    width:100%;
-    text-align:center;
-  }
-}
-
-/* ==============================
-   PRODUCT PAGE — VISUAL TWEAKS
-   ============================== */
-
-/* Больше воздуха сверху */
-.product-layout {
-  margin-top: 60px;
-}
-
-/* Усиленная цена */
-.price {
-  font-size: 30px;
-  font-weight: 800;
-  margin-bottom: 14px;
-}
-
-/* Более тёплый подзаголовок */
-.subtitle {
-  color: #555;
-  max-width: 480px;
-}
-
-/* === CTA BUTTONS (FIX) === */
 .cta-btn {
   display: inline-block;
-  margin-top: 16px;
-  padding: 14px 28px;
-  background: #0a57e0;
+  padding: 16px 32px;
+  background: var(--accent);
   color: #ffffff;
-  font-size: 16px;
   font-weight: 600;
   border-radius: 12px;
-  text-decoration: none;
-  box-shadow: 0 10px 25px rgba(10, 87, 224, 0.18);
+  box-shadow: 0 10px 25px rgba(10,87,224,.18);
+  transition: .15s;
 }
 
 .cta-btn:hover {
@@ -266,13 +153,139 @@ a{
 
 .cta-btn.secondary {
   background: transparent;
-  color: #0a57e0;
-  border: 2px solid #0a57e0;
+  color: var(--accent);
+  border: 2px solid var(--accent);
   box-shadow: none;
 }
 
+/* ======================================================
+   PRODUCT PAGE (POWER / ELKJØP STYLE)
+   ====================================================== */
 
+.product-layout {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 80px;
+}
 
+/* LEFT — STICKY IMAGE */
+.product-media {
+  position: sticky;
+  top: 120px;
+  align-self: flex-start;
+}
 
+.product-media img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+}
 
+/* RIGHT — CONTENT */
+.product-content h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
 
+.price {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  color: #555;
+  max-width: 480px;
+  margin-bottom: 30px;
+}
+
+.product-content section {
+  margin-bottom: 50px;
+}
+
+.product-content h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.product-content p {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 800px;
+}
+
+.product-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-content li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  font-size: 17px;
+}
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+
+.footer {
+  background: var(--bg-lavender);
+  padding: 80px 24px;
+  margin-top: 120px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  font-size: 15px;
+  color: #333;
+}
+
+.footer strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ======================================================
+   MOBILE
+   ====================================================== */
+
+@media (max-width: 900px) {
+
+  .hero .container,
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-media {
+    position: static;
+    margin-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
