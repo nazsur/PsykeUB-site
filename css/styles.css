@@ -5,7 +5,6 @@
 :root {
   --accent: #0a57e0;
   --accent-dark: #063fa8;
-  --purple: #5a2d82;
 
   --bg-page: #ffffff;
   --bg-lavender: #f3eef9;
@@ -49,26 +48,28 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--bg-lavender); /* один цвет с логобаннером */
+  background: var(--bg-lavender);
 }
 
+/* навигационная строка */
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 18px 24px 32px; /* ↓ больше воздуха снизу */
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-/* КЛИКАБЕЛЬНОЕ НАЗВАНИЕ */
+/* кликабельное название */
 .logo-text {
   font-size: 28px;
   font-weight: 800;
   color: var(--accent);
+  letter-spacing: -0.3px;
 }
 
-/* NAV */
+/* навигация */
 .nav {
   margin-left: auto;
   display: flex;
@@ -82,19 +83,20 @@ a {
 }
 
 /* ======================================================
-   HEADER LOGO BANNER (КАК 7STERKE)
+   HEADER LOGO BANNER (LIKE 7STERKE)
    ====================================================== */
 
 .header-logo-banner {
   width: 100%;
   background: var(--bg-lavender);
-  padding: 120px 20px; /* высота как у 7STERKE */
+  padding: 160px 20px;      /* ВАЖНО: большая высота */
   text-align: center;
+  margin-top: -1px;         /* убираем микро-разрыв */
 }
 
 .header-logo-banner img {
   width: 100%;
-  max-width: 900px; /* эффект растянутого лого */
+  max-width: 1000px;        /* ВАЖНО: широкий эффект */
   height: auto;
 }
 
@@ -177,7 +179,7 @@ a {
   gap: 80px;
 }
 
-/* LEFT — IMAGE */
+/* image */
 .product-media {
   position: sticky;
   top: 120px;
@@ -194,7 +196,7 @@ a {
   box-shadow: 0 20px 40px rgba(0,0,0,.12);
 }
 
-/* RIGHT — CONTENT */
+/* content */
 .product-content h1 {
   font-size: 36px;
   margin-bottom: 8px;
@@ -297,5 +299,9 @@ a {
 
   .nav {
     display: none;
+  }
+
+  .header-logo-banner {
+    padding: 100px 20px;
   }
 }
