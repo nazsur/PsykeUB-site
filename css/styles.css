@@ -36,46 +36,56 @@ a{
    HEADER
    ====================================================== */
 
+/* HEADER */
 .header {
-  background: var(--bg-header);
-  border-bottom: 1px solid var(--border-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
 }
 
-.header {
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+/* TOP BAR */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
-
-.header-inner{
-  max-width:1300px;
-  margin:0 auto;
-  padding:18px 20px;
-  display:flex;
-  align-items:center;
-  gap:24px;
+/* TEXT LOGO */
+.logo-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0a57e0; /* как на product */
+  text-decoration: none;
 }
 
-.logo{
-  font-weight:800;
-  font-size:28px;
-  color:var(--accent);
-  margin-right:auto;
+/* NAV */
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
 }
 
-.desktop-nav{
-  display:flex;
-  gap:30px;
+.nav a.active {
+  font-weight: 700;
 }
 
-.desktop-nav a{
-  font-size:17px;
+/* LOGO BANNER (как у 7STERKE) */
+.header-logo-banner {
+  background: #f4eefb; /* лаванда */
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.desktop-nav a.active{
-  color:var(--accent);
-  font-weight:700;
+.header-logo-banner img {
+  max-width: 520px;
+  width: 100%;
 }
+
 
 /* ======================================================
    BUTTONS
@@ -260,6 +270,7 @@ a{
   border: 2px solid #0a57e0;
   box-shadow: none;
 }
+
 
 
 
