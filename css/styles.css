@@ -236,6 +236,31 @@ a{
   max-width: 480px;
 }
 
+/* === CTA BUTTONS (FIX) === */
+.cta-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 28px;
+  background: #0a57e0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(10, 87, 224, 0.18);
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  color: #0a57e0;
+  border: 2px solid #0a57e0;
+  box-shadow: none;
+}
+
 
 
 
