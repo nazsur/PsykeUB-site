@@ -1,57 +1,42 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>PsykeUB – Kritisk hjelp alltid innen rekkevidde</title>
+
+<style>
 /* =====================
    RESET
 ===================== */
-
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
   width: 100%;
   overflow-x: hidden;
+  font-family: Inter, system-ui, Arial;
+  color: #0b1220;
 }
 
 /* =====================
-   VARIABLES
+   HEADER / NAV
 ===================== */
-
-:root {
-  --accent: #5a2d82;
-  --bg-page: #ffffff;
-  --bg-lavender: #f3eef9;
-  --text-main: #0b1220;
-  --muted: #6b7280;
-}
-
-/* =====================
-   BASE
-===================== */
-
-body {
-  font-family: Inter, system-ui, Arial, sans-serif;
-  background: var(--bg-page);
-  color: var(--text-main);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* =====================
-   HEADER
-===================== */
-
 .header {
-  background: var(--bg-lavender);
+  background: #f3eef9;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 20px 24px;
   display: flex;
   align-items: center;
 }
@@ -59,55 +44,53 @@ a {
 .logo-text {
   font-size: 28px;
   font-weight: 800;
-  color: var(--accent);
+  color: #5a2d82;
+  text-decoration: none;
 }
 
 .nav {
   margin-left: auto;
   display: flex;
   gap: 28px;
-  font-size: 16px;
 }
 
 .nav a {
-  color: var(--accent);
+  text-decoration: none;
+  color: #5a2d82;
+  font-weight: 500;
 }
 
 .nav a.active {
   font-weight: 700;
-  text-decoration: underline;
 }
 
 /* =====================
    FULL WIDTH BANNER
 ===================== */
-
 .hero-banner {
   width: 100vw;
-  height: 220px; /* ← регулируй высоту тут */
+  height: 360px;
 
   background-image: url("psykeub-banner.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  /* КЛЮЧ: выравнивание по краям экрана */
+  background-color: #f3eef9;
+
   margin-left: calc(50% - 50vw);
 }
 
 /* =====================
-   HERO SECTION
+   HERO CONTENT
 ===================== */
-
 .hero {
-  padding: 100px 0;
+  padding: 100px 24px;
 }
 
-.hero .container {
+.hero-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
-
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
@@ -116,82 +99,35 @@ a {
 
 .hero h1 {
   font-size: 48px;
-  line-height: 1.15;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 18px;
-  color: var(--muted);
-  max-width: 520px;
-  margin-bottom: 36px;
+  color: #6b7280;
+  margin-bottom: 32px;
 }
-
-.hero img {
-  width: 100%;
-  border-radius: 18px;
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 30px 60px rgba(0,0,0,.15);
-}
-
-/* =====================
-   BUTTON
-===================== */
 
 .cta-btn {
   display: inline-block;
   padding: 16px 32px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 600;
+  background: #5a2d82;
+  color: white;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(90,45,130,.25);
-  transition: .15s ease;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.cta-btn:hover {
-  transform: translateY(-2px);
-}
-
-/* =====================
-   FOOTER
-===================== */
-
-footer {
-  background: var(--bg-lavender);
-  padding: 80px 24px;
-  margin-top: 120px;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  font-size: 15px;
-}
-
-footer strong {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 60px;
-  font-size: 14px;
-  color: #666;
+.hero img {
+  width: 100%;
+  border-radius: 16px;
 }
 
 /* =====================
    MOBILE
 ===================== */
-
 @media (max-width: 900px) {
-
-  .hero .container {
+  .hero-inner {
     grid-template-columns: 1fr;
   }
 
@@ -204,6 +140,43 @@ footer strong {
   }
 
   .hero-banner {
-    height: 160px;
+    height: 240px;
   }
 }
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo-text">PsykeUB</a>
+
+    <nav class="nav">
+      <a href="#" class="active">Hjem</a>
+      <a href="#">Nettbutikk</a>
+      <a href="#">Om oss</a>
+      <a href="#">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-banner"></div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Kritisk hjelp<br>alltid innen rekkevidde</h1>
+      <p>
+        De viktigste norske nødnumrene og hjelpelinjen for mental helse –
+        samlet på én magnet, synlig i hverdagen.
+      </p>
+      <a href="#" class="cta-btn">Kjøp magneten</a>
+    </div>
+
+    <img src="bilde.png" alt="PsykeUB magnet">
+  </div>
+</section>
+
+</body>
+</html>
