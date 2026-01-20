@@ -93,18 +93,16 @@ a {
    ====================================================== */
 
 .header-logo-banner {
-  position: relative;
-  width: 100vw;                 /* 🔥 на всю ширину экрана */
-  height: 260px;
+  width: 100vw;
+  height: 300px; /* ← можешь менять: 220–300px */
 
-  margin-left: calc(50% - 50vw); /* 🔥 убирает боковые отступы */
-  margin-right: calc(50% - 50vw);
-
-  background-color: var(--lavender);
   background-image: url("psykeub-banner.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 
@@ -313,6 +311,7 @@ a {
     padding: 100px 20px;
   }
 }
+
 
 
 
