@@ -3,101 +3,80 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>PsykeUB – Kritisk hjelp alltid innen rekkevidde</title>
-  <meta name="description" content="PsykeUB lager sikkerhetsmagneter med Norges viktigste nødnummer og mental helsehjelp – alltid innen rekkevidde." />
-  <meta name="keywords" content="psykeub, nødnummer, sikkerhetsmagnet, psykisk helse, mental helsehjelp, 116 123" />
-  <meta name="author" content="PsykeUB" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph (Facebook / Slack etc.) -->
-  <meta property="og:title" content="PsykeUB – Kritisk hjelp alltid innen rekkevidde" />
-  <meta property="og:description" content="Sikkerhetsmagnet med Norges viktigste nødnummer og mental helsehjelp." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://psykeub.no/" />
-  <meta property="og:image" content="https://psykeub.no/psykeub-banner.png" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="PsykeUB – Kritisk hjelp" />
-  <meta name="twitter:description" content="Sikkerhetsmagnet med Norges viktigste nødnummer og mental helsehjelp." />
-  <meta name="twitter:image" content="https://psykeub.no/psykeub-banner.png" />
-
-  <!-- STYLES -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="PsykeUB — synliggjør viktige nødnumre med en sikkerhetsmagnet." />
+  <!-- Стили -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <!-- HEADER -->
+
+  <!-- HEADER / NAV -->
   <header class="header" role="banner">
     <div class="header-inner">
-      <a href="#hero" class="logo-text">PsykeUB</a>
+      <a class="logo-text" href="#hero">PsykeUB</a>
 
-      <nav class="nav" role="navigation" aria-label="Hovednavigasjon">
-        <a href="#hero" class="nav-link">Hjem</a>
-        <a href="#product" class="nav-link">Produkt</a>
-        <a href="#about" class="nav-link">Om oss</a>
-        <a href="#footer" class="nav-link">Kontakt</a>
+      <nav class="nav" role="navigation" aria-label="Hovedmeny">
+        <a href="#hero" class="active">Hjem</a>
+        <a href="product.html">Produkt</a>
+        <a href="#omoss">Om oss</a>
+        <a href="#footer">Kontakt</a>
       </nav>
     </div>
   </header>
 
-  <!-- FULL-WIDTH BANNER (uses /psykeub-banner.png) -->
-  <div class="header-logo-banner" role="img" aria-label="PsykeUB banner"></div>
+  <!-- FULL-WIDTH LOGO BANNER (edge-to-edge) -->
+  <div class="header-logo-banner" aria-hidden="true"></div>
 
   <main>
+
     <!-- HERO -->
     <section id="hero" class="hero">
       <div class="container">
         <div class="hero-left">
-          <h1 class="hero-title">Kritisk hjelp<br />alltid innen rekkevidde</h1>
-          <p class="hero-sub">
-            De viktigste norske nødnumrene og hjelpelinjen for mental helse – samlet på én magnet, synlig i hverdagen.
+          <h1>Kritisk hjelp<br>alltid innen rekkevidde</h1>
+          <p>
+            De viktigste norske nødnumrene og hjelpelinjen for mental helse –
+            samlet på én magnet, synlig i hverdagen.
           </p>
-          <a class="cta-btn" href="#product">Kjøp magneten</a>
+          <a href="product.html" class="cta-btn">Kjøp magneten</a>
         </div>
 
         <aside class="magnet-preview">
-          <img src="bilde.png" alt="Sikkerhetsmagnet med Norges nødnumre" />
+          <img src="bilde.png" alt="Sikkerhetsmagnet PsykeUB">
         </aside>
       </div>
     </section>
 
-    <!-- PRODUCT (kort) -->
-    <section id="product" class="product-section">
-      <div class="product-layout">
-        <div class="product-media">
-          <img src="bilde.png" alt="Sikkerhetsmagnet" />
+    <!-- OM OSS -->
+    <section id="omoss" class="omoss">
+      <div class="omoss-inner">
+        <div class="omoss-image">
+          <img src="team_psykeub.jpg" alt="Team PsykeUB — teamfoto eller illustrasjon">
         </div>
 
-        <div class="product-content">
-          <h1>Sikkerhetsmagnet</h1>
-          <div class="price">200 kr</div>
-          <p class="subtitle">Norges viktigste nødnummer – alltid tilgjengelig.</p>
+        <div class="omoss-content">
+          <h2>Om oss</h2>
+          <p>
+            Vi er PsykeUB – en ungdomsbedrift som jobber for å gjøre det enklere
+            for alle å få rask tilgang til Norges viktigste nødnummer og mental helsehjelp.
+          </p>
+          <p>
+            Målet vårt er å skape trygghet i hverdagen og bidra til bedre psykisk helse,
+            gjennom produkter som er synlige, tilgjengelige og nyttige for alle.
+          </p>
 
-          <section>
-            <h2>Produktbeskrivelse</h2>
-            <p>En enkel kjøleskabsmagnet som samler Norges viktigste nødnummer og informasjon om mental helsehjelp på ett sted.</p>
-            <a class="cta-btn secondary" href="#about">Les mer om oss</a>
-          </section>
+          <a href="om-oss.html" class="cta-btn secondary">Les mer om oss</a>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about-section">
-      <div class="about-inner">
-        <h2>Om oss</h2>
-        <p>
-          Vi er PsykeUB – en ungdomsbedrift som jobber for å gjøre det enklere for alle å få rask tilgang til Norges viktigste nødnummer og mental helsehjelp.
-        </p>
-        <p>Les mer kommer snart eller se hele siden <a href="om-oss.html">her</a> (når siden er klar).</p>
-      </div>
-    </section>
+    <!-- (eventuelle andre seksjoner...) -->
+
   </main>
 
   <!-- FOOTER -->
-  <footer id="footer" class="footer" role="contentinfo">
+  <footer id="footer" class="footer">
     <div class="footer-inner">
       <div>
         <strong>Kontakt</strong>
@@ -106,8 +85,8 @@
 
       <div>
         <strong>Følg oss</strong>
-        <a href="https://instagram.com/psyke.ub" target="_blank" rel="noopener">Instagram</a><br />
-        <a href="https://www.facebook.com/profile.php?id=61583964930550" target="_blank" rel="noopener">Facebook</a>
+        Instagram<br>
+        Facebook
       </div>
 
       <div>
@@ -116,23 +95,8 @@
       </div>
     </div>
 
-    <div class="footer-bottom">
-      © PsykeUB | Laget med ❤️ i Norge
-    </div>
+    <div class="footer-bottom">© PsykeUB | Laget med ❤️ i Norge</div>
   </footer>
 
-  <!-- tiny JS to smooth-scroll anchors (optional, nice UX) -->
-  <script>
-    (function () {
-      document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', function (e) {
-          e.preventDefault();
-          const id = this.getAttribute('href').slice(1);
-          const el = document.getElementById(id);
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      });
-    })();
-  </script>
 </body>
 </html>
