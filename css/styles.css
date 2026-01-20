@@ -88,7 +88,9 @@ a {
    ====================================================== */
 
 .header-logo-banner {
-  width: 100vw;
+  position: relative;
+
+  width: 100%;
   height: 420px;
 
   background-image: url("logo-psykeub.jpg");
@@ -97,9 +99,6 @@ a {
   background-size: cover;
 
   background-color: var(--bg-lavender);
-
-  margin: 0;
-  padding: 0;
 }
 
 
@@ -309,6 +308,7 @@ a {
     padding: 100px 20px;
   }
 }
+
 
 
 
