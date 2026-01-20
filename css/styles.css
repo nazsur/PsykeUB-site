@@ -46,6 +46,10 @@ a { text-decoration: none; color: inherit; }
   margin-top: -1px;
 }
 
+.header-inner {
+  border-bottom: none !important;
+}
+
 /* header-inner uten border-bottom (удаляли линию) */
 .header-inner {
   max-width: 1200px;
@@ -221,4 +225,5 @@ a { text-decoration: none; color: inherit; }
 
   .nav { display: none; }
 }
+
 
