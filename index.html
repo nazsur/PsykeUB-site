@@ -1,182 +1,138 @@
 <!doctype html>
 <html lang="nb">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>PsykeUB – Kritisk hjelp alltid innen rekkevidde</title>
+  <title>PsykeUB – Kritisk hjelp alltid innen rekkevidde</title>
+  <meta name="description" content="PsykeUB lager sikkerhetsmagneter med Norges viktigste nødnummer og mental helsehjelp – alltid innen rekkevidde." />
+  <meta name="keywords" content="psykeub, nødnummer, sikkerhetsmagnet, psykisk helse, mental helsehjelp, 116 123" />
+  <meta name="author" content="PsykeUB" />
+  <meta name="robots" content="index, follow" />
 
-<style>
-/* =====================
-   RESET
-===================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <!-- Open Graph (Facebook / Slack etc.) -->
+  <meta property="og:title" content="PsykeUB – Kritisk hjelp alltid innen rekkevidde" />
+  <meta property="og:description" content="Sikkerhetsmagnet med Norges viktigste nødnummer og mental helsehjelp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://psykeub.no/" />
+  <meta property="og:image" content="https://psykeub.no/psykeub-banner.png" />
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-  font-family: Inter, system-ui, Arial;
-  color: #0b1220;
-}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PsykeUB – Kritisk hjelp" />
+  <meta name="twitter:description" content="Sikkerhetsmagnet med Norges viktigste nødnummer og mental helsehjelp." />
+  <meta name="twitter:image" content="https://psykeub.no/psykeub-banner.png" />
 
-/* =====================
-   HEADER / NAV
-===================== */
-.header {
-  background: #f3eef9;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 24px;
-  display: flex;
-  align-items: center;
-}
-
-.logo-text {
-  font-size: 28px;
-  font-weight: 800;
-  color: #5a2d82;
-  text-decoration: none;
-}
-
-.nav {
-  margin-left: auto;
-  display: flex;
-  gap: 28px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #5a2d82;
-  font-weight: 500;
-}
-
-.nav a.active {
-  font-weight: 700;
-}
-
-/* =====================
-   FULL WIDTH BANNER
-===================== */
-.hero-banner {
-  width: 100vw;
-  height: 360px;
-
-  background-image: url("psykeub-banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  background-color: #f3eef9;
-
-  margin-left: calc(50% - 50vw);
-}
-
-/* =====================
-   HERO CONTENT
-===================== */
-.hero {
-  padding: 100px 24px;
-}
-
-.hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #6b7280;
-  margin-bottom: 32px;
-}
-
-.cta-btn {
-  display: inline-block;
-  padding: 16px 32px;
-  background: #5a2d82;
-  color: white;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.hero img {
-  width: 100%;
-  border-radius: 16px;
-}
-
-/* =====================
-   MOBILE
-===================== */
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .hero-banner {
-    height: 240px;
-  }
-}
-</style>
+  <!-- STYLES -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="#hero" class="logo-text">PsykeUB</a>
 
-<header class="header">
-  <div class="header-inner">
-    <a href="#" class="logo-text">PsykeUB</a>
+      <nav class="nav" role="navigation" aria-label="Hovednavigasjon">
+        <a href="#hero" class="nav-link">Hjem</a>
+        <a href="#product" class="nav-link">Produkt</a>
+        <a href="#about" class="nav-link">Om oss</a>
+        <a href="#footer" class="nav-link">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="nav">
-      <a href="#" class="active">Hjem</a>
-      <a href="#">Nettbutikk</a>
-      <a href="#">Om oss</a>
-      <a href="#">Kontakt</a>
-    </nav>
-  </div>
-</header>
+  <!-- FULL-WIDTH BANNER (uses /psykeub-banner.png) -->
+  <div class="header-logo-banner" role="img" aria-label="PsykeUB banner"></div>
 
-<div class="hero-banner"></div>
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-left">
+          <h1 class="hero-title">Kritisk hjelp<br />alltid innen rekkevidde</h1>
+          <p class="hero-sub">
+            De viktigste norske nødnumrene og hjelpelinjen for mental helse – samlet på én magnet, synlig i hverdagen.
+          </p>
+          <a class="cta-btn" href="#product">Kjøp magneten</a>
+        </div>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <h1>Kritisk hjelp<br>alltid innen rekkevidde</h1>
-      <p>
-        De viktigste norske nødnumrene og hjelpelinjen for mental helse –
-        samlet på én magnet, synlig i hverdagen.
-      </p>
-      <a href="#" class="cta-btn">Kjøp magneten</a>
+        <aside class="magnet-preview">
+          <img src="bilde.png" alt="Sikkerhetsmagnet med Norges nødnumre" />
+        </aside>
+      </div>
+    </section>
+
+    <!-- PRODUCT (kort) -->
+    <section id="product" class="product-section">
+      <div class="product-layout">
+        <div class="product-media">
+          <img src="bilde.png" alt="Sikkerhetsmagnet" />
+        </div>
+
+        <div class="product-content">
+          <h1>Sikkerhetsmagnet</h1>
+          <div class="price">200 kr</div>
+          <p class="subtitle">Norges viktigste nødnummer – alltid tilgjengelig.</p>
+
+          <section>
+            <h2>Produktbeskrivelse</h2>
+            <p>En enkel kjøleskabsmagnet som samler Norges viktigste nødnummer og informasjon om mental helsehjelp på ett sted.</p>
+            <a class="cta-btn secondary" href="#about">Les mer om oss</a>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+      <div class="about-inner">
+        <h2>Om oss</h2>
+        <p>
+          Vi er PsykeUB – en ungdomsbedrift som jobber for å gjøre det enklere for alle å få rask tilgang til Norges viktigste nødnummer og mental helsehjelp.
+        </p>
+        <p>Les mer kommer snart eller se hele siden <a href="om-oss.html">her</a> (når siden er klar).</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <strong>Kontakt</strong>
+        psykeub@gmail.no
+      </div>
+
+      <div>
+        <strong>Følg oss</strong>
+        <a href="https://instagram.com/psyke.ub" target="_blank" rel="noopener">Instagram</a><br />
+        <a href="https://www.facebook.com/profile.php?id=61583964930550" target="_blank" rel="noopener">Facebook</a>
+      </div>
+
+      <div>
+        <strong>PsykeUB</strong>
+        Ungdomsbedrift – 2025
+      </div>
     </div>
 
-    <img src="bilde.png" alt="PsykeUB magnet">
-  </div>
-</section>
+    <div class="footer-bottom">
+      © PsykeUB | Laget med ❤️ i Norge
+    </div>
+  </footer>
 
+  <!-- tiny JS to smooth-scroll anchors (optional, nice UX) -->
+  <script>
+    (function () {
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = this.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
