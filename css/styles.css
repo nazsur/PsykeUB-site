@@ -42,10 +42,6 @@ a { text-decoration: none; color: inherit; }
   box-shadow: none !important;
 }
 
-.header-logo-banner {
-  margin-top: -1px;
-}
-
 .header-inner {
   border-bottom: none !important;
 }
@@ -225,5 +221,6 @@ a { text-decoration: none; color: inherit; }
 
   .nav { display: none; }
 }
+
 
 
