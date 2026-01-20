@@ -196,6 +196,21 @@
       .header-logo-banner {
         height: 200px;
       }
+
+      /* FULL WIDTH BANNER — EDGE TO EDGE */
+.header-logo-banner {
+  width: 100vw;                 /* вся ширина экрана */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  height: 320px;                /* 🔽 уменьши высоту */
+  background-image: url("psykeub-banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-color: var(--lavender);
+}
     }
   </style>
 </head>
@@ -260,4 +275,5 @@
 
 </body>
 </html>
+
 
