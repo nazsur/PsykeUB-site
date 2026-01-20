@@ -21,9 +21,7 @@
       --text: #0b1220;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -44,7 +42,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: #ffffff;
+      background: var(--lavender); /* 🔴 ОДИН ЦВЕТ С БАННЕРОМ */
     }
 
     .header-inner {
@@ -54,7 +52,6 @@
       display: flex;
       align-items: center;
       gap: 24px;
-      border-bottom: 1px solid rgba(0,0,0,.08);
     }
 
     .logo-text {
@@ -76,20 +73,16 @@
     }
 
     /* =====================
-       LOGO BANNER (FULL WIDTH)
+       LOGO BANNER (FIXED SIZE)
        ===================== */
     .header-logo-banner {
       width: 100%;
-      background: var(--lavender);
-      display: flex;
-      justify-content: center;
-    }
-
-    .header-logo-banner img {
-      width: 100%;
-      max-width: 1600px;
-      height: auto;
-      display: block;
+      height: 260px;              /* 🔴 НОРМАЛЬНАЯ ВЫСОТА */
+      background-color: var(--lavender);
+      background-image: url("psykeub-banner.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;   /* 🔴 ВАЖНО */
     }
 
     /* =====================
@@ -97,6 +90,7 @@
        ===================== */
     .hero {
       padding: 100px 0;
+      background: #ffffff;
     }
 
     .hero .container {
@@ -126,11 +120,10 @@
       display: inline-block;
       padding: 16px 32px;
       background: var(--accent);
-      color: #ffffff;
+      color: #fff;
       font-weight: 600;
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(10,87,224,.18);
-      transition: 0.15s ease;
     }
 
     .cta-btn:hover {
@@ -140,7 +133,7 @@
     .hero img {
       width: 100%;
       border-radius: 18px;
-      background: #ffffff;
+      background: #fff;
       padding: 20px;
       box-shadow: 0 30px 60px rgba(0,0,0,.15);
     }
@@ -188,6 +181,10 @@
       .nav {
         display: none;
       }
+
+      .header-logo-banner {
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -207,13 +204,9 @@
   </div>
 </header>
 
-<!-- LOGO BANNER -->
-<div class="header-logo-banner">
-  <img src="psykeub-banner.png" alt="PsykeUB banner">
-</div>
+<div class="header-logo-banner"></div>
 
 <main>
-
   <section class="hero">
     <div class="container">
       <div>
@@ -228,7 +221,6 @@
       <img src="bilde.png" alt="Sikkerhetsmagnet PsykeUB">
     </div>
   </section>
-
 </main>
 
 <footer id="footer">
