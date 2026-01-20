@@ -1,54 +1,48 @@
 /* ======================================================
-   VARIABLES
+   GLOBAL VARIABLES
    ====================================================== */
-:root {
-  --accent: #5a2d82;        /* фирменный фиолетовый (логотип) */
-  --accent-blue: #0a57e0;   /* предыдущий синий, можно использовать */
+:root{
+  --lavender: #f3eef9;
+  --purple: #5a2d82;
+  --accent: #5a2d82; /* bruker lilla som aksent */
   --muted: #6b7280;
-  --bg-page: #ffffff;
-  --bg-lavender: #f3eef9;
-  --text-main: #0b1220;
+  --text: #0b1220;
+  --bg: #ffffff;
   --radius: 14px;
 }
 
-/* ======================================================
-   RESET / BASE
-   ====================================================== */
-html, body {
+/* Prevent horizontal scroll artifacts on full-width banner */
+html,body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* предотвращаем горизонтальную прокрутку при full-bleed */
+  overflow-x: hidden;
   font-family: Inter, system-ui, Arial, sans-serif;
-  background: var(--bg-page);
-  color: var(--text-main);
+  background: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
+* { box-sizing: border-box; }
 
 a { text-decoration: none; color: inherit; }
 
 /* ======================================================
-   HEADER TOP BAR
+   HEADER (top bar) — same color as banner, no border line
    ====================================================== */
 .header {
   position: sticky;
   top: 0;
-  z-index: 60;
-  background: var(--bg-lavender); /* делаем тот же цвет, что и баннер */
-  /* небольшой shadow если нужно: */
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  z-index: 100;
+  background: var(--lavender); /* samme farge som banner - gir helhet */
 }
 
+/* header-inner uten border-bottom (удаляли линию) */
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 20px 24px; /* litt luft */
   display: flex;
   align-items: center;
   gap: 24px;
@@ -57,78 +51,61 @@ a { text-decoration: none; color: inherit; }
 .logo-text {
   font-size: 28px;
   font-weight: 800;
-  color: var(--accent);
-  letter-spacing: -0.4px;
+  color: var(--purple);
 }
 
+/* NAV */
 .nav {
   margin-left: auto;
   display: flex;
   gap: 28px;
+  font-size: 16px;
   align-items: center;
 }
-.nav .nav-link {
-  color: #222;
-  font-weight: 500;
-}
-.nav .nav-link:hover,
-.nav .nav-link:focus {
-  color: var(--accent);
-}
-.nav .nav-link.active {
-  color: var(--accent);
-  font-weight: 700;
-}
+
+.nav a { color: rgba(0,0,0,0.75); }
+.nav a.active { color: var(--purple); font-weight: 700; }
 
 /* ======================================================
-   FULL-WIDTH LOGO BANNER (stretch from edge to edge)
+   LOGO BANNER — full width, background image (streched)
    ====================================================== */
-/* IMPORTANT:
-   Banner uses an image file located at /psykeub-banner.png
-   Put the file in the site root (same place as index.html).
-*/
-.header-logo-banner {
-  /* make full-bleed across viewport */
+.header-logo-banner{
+  /* edge-to-edge trick: make element full viewport width */
   width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--bg-lavender);
-  background-image: url("/psykeub-banner.png");
+  margin-left: calc(50% - 50vw);
+  height: 260px;              /* <-- juster høyde her (redusert fra før) */
+  background-color: var(--lavender);
+  background-image: url('/psykeub-banner.png'); /* put banner file in root */
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;           /* cover => fills area, will crop sides if needed */
-  height: 300px;                    /* tweak this value to control banner height */
+  background-position: center;
+  background-size: cover;     /* cover for å fylle hele området */
   display: block;
 }
 
-/* If you prefer the image centered but not cover, use background-size: contain; */
-/* For very large banner use height: 380px or 420px (depends on design). */
+/* If you prefer to show img instead of background, replace above with an <img> inside and style .header-logo-banner img */
 
 /* ======================================================
    HERO
    ====================================================== */
-.hero {
-  padding: 80px 0 40px;
-  background: var(--bg-page);
-}
+.hero { padding: 80px 0; background: #ffffff; }
 
-.container {
+.hero .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 64px;
+  gap: 60px;
   align-items: center;
 }
 
-.hero-title {
+.hero-left h1 {
   font-size: 48px;
   line-height: 1.05;
   margin: 0 0 18px;
 }
 
-.hero-sub {
+.hero-left p {
   color: var(--muted);
   max-width: 520px;
   margin-bottom: 18px;
@@ -136,60 +113,71 @@ a { text-decoration: none; color: inherit; }
 
 .cta-btn {
   display: inline-block;
-  background: var(--accent);
-  color: #fff;
   padding: 12px 26px;
+  background: var(--purple);
+  color: #fff;
   border-radius: 12px;
   font-weight: 600;
-  box-shadow: 0 8px 22px rgba(90,45,130,0.12);
-  transition: transform .15s ease;
+  box-shadow: 0 8px 20px rgba(90,45,130,0.12);
 }
-.cta-btn:hover { transform: translateY(-3px); }
+.cta-btn.secondary {
+  background: transparent;
+  color: var(--purple);
+  border: 2px solid var(--purple);
+  box-shadow: none;
+}
 
+/* magnet preview */
 .magnet-preview img {
   width: 100%;
   border-radius: 14px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
   background: #fff;
   padding: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
 }
 
 /* ======================================================
-   PRODUCT LAYOUT (short)
+   OM OSS (two-column with left image, right text)
    ====================================================== */
-.product-layout {
+.omoss {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.omoss-inner {
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 460px 1fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.product-media img {
+.omoss-image img {
   width: 100%;
-  max-height: 520px;
-  object-fit: contain;
-  background: #fff;
-  padding: 16px;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-.product-content h1 { font-size: 36px; margin: 0 0 8px; }
-.price { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
-.subtitle { color: #555; max-width: 480px; margin-bottom: 30px; }
+.omoss-content h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.omoss-content p {
+  color: var(--muted);
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
 
 /* ======================================================
-   ABOUT + FOOTER
+   FOOTER
    ====================================================== */
-.about-section { padding: 60px 0; background: #fff; }
-.about-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-
 .footer {
-  background: var(--bg-lavender);
+  background: var(--lavender);
   padding: 60px 24px;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 .footer-inner {
   max-width: 1200px;
@@ -201,26 +189,27 @@ a { text-decoration: none; color: inherit; }
 }
 .footer-bottom {
   text-align: center;
-  font-size: 14px;
-  color: #666;
   margin-top: 28px;
+  color: #666;
 }
 
 /* ======================================================
    RESPONSIVE
    ====================================================== */
-@media (max-width: 1000px) {
-  .container { grid-template-columns: 1fr; gap: 40px; }
-  .product-layout { grid-template-columns: 1fr; gap: 30px; margin-top: 20px; }
-  .header-logo-banner { height: 220px; }
-  .hero-title { font-size: 34px; }
-}
+@media (max-width: 900px) {
+  .hero .container,
+  .omoss-inner {
+    grid-template-columns: 1fr;
+  }
 
-@media (max-width: 600px) {
-  .header-inner { padding: 14px 16px; }
-  .logo-text { font-size: 22px; }
-  .nav { display: none; } /* small screens: hide desktop nav (you can add burger later) */
-  .header-logo-banner { height: 160px; background-position: center 30%; }
-  .hero-title { font-size: 28px; }
-  .cta-btn { width: 100%; text-align: center; padding: 14px; }
+  .header-logo-banner {
+    height: 200px;
+    background-position: center top;
+  }
+
+  .logo-text {
+    font-size: 22px;
+  }
+
+  .nav { display: none; }
 }
