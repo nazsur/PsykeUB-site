@@ -37,6 +37,14 @@ a { text-decoration: none; color: inherit; }
   z-index: 100;
   background: var(--lavender); /* samme farge som banner - gir helhet */
 }
+.header {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.header-logo-banner {
+  margin-top: -1px;
+}
 
 /* header-inner uten border-bottom (удаляли линию) */
 .header-inner {
@@ -213,3 +221,4 @@ a { text-decoration: none; color: inherit; }
 
   .nav { display: none; }
 }
+
