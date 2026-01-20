@@ -96,7 +96,7 @@ a {
   width: 100%;
   height: 420px; /* можешь менять 360–480 */
   background-color: #f3eef9;
-  background-image: url("logo-psykeub.jpg");
+  background-image: url("psykeub-banner.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -307,6 +307,7 @@ a {
     padding: 100px 20px;
   }
 }
+
 
 
 
