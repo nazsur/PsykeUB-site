@@ -12,217 +12,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon_180.png">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-  <style>
-    html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-    :root {
-      --accent: #0a57e0;
-      --muted: #6b7280;
-      --bg: #ffffff;
-      --lavender: #f3eef9;
-      --text: #0b1220;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, Arial;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* =====================
-       HEADER (TOP BAR)
-       ===================== */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--lavender); /* 🔴 ОДИН ЦВЕТ С БАННЕРОМ */
-    }
-
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 18px 24px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-.logo-text {
-  font-size: 28px;
-  font-weight: 800;
-  color: #5a2d82; /* тот же фиолетовый */
-}
-
-.nav {
-  margin-left: auto;
-  display: flex;
-  gap: 28px;
-  font-size: 16px;
-}
-
-.nav a {
-  color: #5a2d82;      /* фиолетовый как в баннере */
-  font-weight: 500;
-}
-
-.nav a.active {
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-
-    .nav a.active {
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    /* =====================
-       LOGO BANNER (FIXED SIZE)
-       ===================== */
-    .header-logo-banner {
-      width: 100%;
-      height: 260px;              /* 🔴 НОРМАЛЬНАЯ ВЫСОТА */
-      background-color: var(--lavender);
-      background-image: url("psykeub-banner.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;   /* 🔴 ВАЖНО */
-    }
-
-    /* =====================
-       HERO
-       ===================== */
-    .hero {
-      padding: 100px 0;
-      background: #ffffff;
-    }
-
-    .hero .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 520px;
-      margin-bottom: 36px;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      padding: 16px 32px;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 600;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(10,87,224,.18);
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .hero img {
-      width: 100%;
-      border-radius: 18px;
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 30px 60px rgba(0,0,0,.15);
-    }
-
-    /* =====================
-       FOOTER
-       ===================== */
-    footer {
-      background: var(--lavender);
-      padding: 80px 24px;
-      margin-top: 120px;
-    }
-
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      font-size: 15px;
-      color: #333;
-    }
-
-    footer strong {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    @media (max-width: 900px) {
-      .hero .container {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .nav {
-        display: none;
-      }
-
-      .header-logo-banner {
-        height: 200px;
-      }
-
-      /* FULL WIDTH BANNER — EDGE TO EDGE */
-.header-logo-banner {
-  width: 100vw;                 /* вся ширина экрана */
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  height: 320px;                /* 🔽 уменьши высоту */
-  background-image: url("psykeub-banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  background-color: var(--lavender);
-}
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="logo-text">PsykeUB</a>
@@ -236,9 +32,12 @@
   </div>
 </header>
 
-<div class="header-logo-banner"></div>
+<!-- FULL WIDTH BANNER -->
+<section class="hero-banner"></section>
 
+<!-- MAIN -->
 <main>
+
   <section class="hero">
     <div class="container">
       <div>
@@ -253,8 +52,10 @@
       <img src="bilde.png" alt="Sikkerhetsmagnet PsykeUB">
     </div>
   </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer id="footer">
   <div class="footer-inner">
     <div>
@@ -281,6 +82,3 @@
 
 </body>
 </html>
-
-
-
