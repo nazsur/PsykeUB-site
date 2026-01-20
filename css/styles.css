@@ -1,29 +1,6 @@
-/* ======================================================
-   GLOBAL VARIABLES
-   ====================================================== */
-
-:root {
-  --accent: #0a57e0;
-  --accent-dark: #063fa8;
-
-  --bg-page: #ffffff;
-  --bg-lavender: #f3eef9;
-  --card-bg: #ffffff;
-
-  --text-main: #0b1220;
-  --muted: #6b7280;
-
-  --radius: 14px;
-}
-
-/* ======================================================
-   RESET & BASE
-   ====================================================== */
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
+/* =====================
+   RESET
+===================== */
 
 * {
   box-sizing: border-box;
@@ -32,10 +9,28 @@ html, body {
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
+/* =====================
+   VARIABLES
+===================== */
+
+:root {
+  --accent: #5a2d82;
+  --bg-page: #ffffff;
+  --bg-lavender: #f3eef9;
+  --text-main: #0b1220;
+  --muted: #6b7280;
+}
+
+/* =====================
+   BASE
+===================== */
+
 body {
-  font-family: Inter, system-ui, Arial;
+  font-family: Inter, system-ui, Arial, sans-serif;
   background: var(--bg-page);
   color: var(--text-main);
 }
@@ -45,36 +40,28 @@ a {
   color: inherit;
 }
 
-/* ======================================================
-   HEADER — TOP BAR
-   ====================================================== */
+/* =====================
+   HEADER
+===================== */
 
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
   background: var(--bg-lavender);
 }
 
-/* навигационная строка */
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 24px 32px; /* ↓ больше воздуха снизу */
+  padding: 18px 24px;
   display: flex;
   align-items: center;
-  gap: 24px;
 }
 
-/* кликабельное название */
 .logo-text {
   font-size: 28px;
   font-weight: 800;
   color: var(--accent);
-  letter-spacing: -0.3px;
 }
 
-/* навигация */
 .nav {
   margin-left: auto;
   display: flex;
@@ -82,43 +69,45 @@ a {
   font-size: 16px;
 }
 
-.nav a.active {
-  font-weight: 700;
+.nav a {
   color: var(--accent);
 }
 
+.nav a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
 
-/* ======================================================
-   HEADER LOGO BANNER — FULL WIDTH (7STERKE STYLE)
-   ====================================================== */
+/* =====================
+   FULL WIDTH BANNER
+===================== */
 
-.header-logo-banner {
+.hero-banner {
   width: 100vw;
-  height: 300px; /* ← можешь менять: 220–300px */
+  height: 220px; /* ← регулируй высоту тут */
 
   background-image: url("psykeub-banner.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
+  /* КЛЮЧ: выравнивание по краям экрана */
   margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
 }
 
-
-/* ======================================================
-   HERO (MAIN PAGE)
-   ====================================================== */
+/* =====================
+   HERO SECTION
+===================== */
 
 .hero {
   padding: 100px 0;
-  background: #ffffff;
 }
 
 .hero .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
@@ -141,23 +130,23 @@ a {
 .hero img {
   width: 100%;
   border-radius: 18px;
-  background: #ffffff;
+  background: #fff;
   padding: 20px;
   box-shadow: 0 30px 60px rgba(0,0,0,.15);
 }
 
-/* ======================================================
-   CTA BUTTONS
-   ====================================================== */
+/* =====================
+   BUTTON
+===================== */
 
 .cta-btn {
   display: inline-block;
   padding: 16px 32px;
   background: var(--accent);
-  color: #ffffff;
+  color: #fff;
   font-weight: 600;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(10,87,224,.18);
+  box-shadow: 0 10px 25px rgba(90,45,130,.25);
   transition: .15s ease;
 }
 
@@ -165,92 +154,11 @@ a {
   transform: translateY(-2px);
 }
 
-.cta-btn.secondary {
-  background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
-  box-shadow: none;
-}
-
-/* ======================================================
-   PRODUCT PAGE
-   ====================================================== */
-
-.product-layout {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 460px 1fr;
-  gap: 80px;
-}
-
-/* image */
-.product-media {
-  position: sticky;
-  top: 120px;
-  align-self: flex-start;
-}
-
-.product-media img {
-  width: 100%;
-  max-height: 520px;
-  object-fit: contain;
-  background: #ffffff;
-  padding: 16px;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.12);
-}
-
-/* content */
-.product-content h1 {
-  font-size: 36px;
-  margin-bottom: 8px;
-}
-
-.price {
-  font-size: 30px;
-  font-weight: 800;
-  margin-bottom: 14px;
-}
-
-.subtitle {
-  color: #555;
-  max-width: 480px;
-  margin-bottom: 30px;
-}
-
-.product-content section {
-  margin-bottom: 50px;
-}
-
-.product-content h2 {
-  font-size: 26px;
-  margin-bottom: 12px;
-}
-
-.product-content p {
-  font-size: 17px;
-  color: var(--muted);
-  max-width: 800px;
-}
-
-.product-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.product-content li {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0,0,0,.08);
-  font-size: 17px;
-}
-
-/* ======================================================
+/* =====================
    FOOTER
-   ====================================================== */
+===================== */
 
-.footer {
+footer {
   background: var(--bg-lavender);
   padding: 80px 24px;
   margin-top: 120px;
@@ -263,10 +171,9 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   font-size: 15px;
-  color: #333;
 }
 
-.footer strong {
+footer strong {
   display: block;
   margin-bottom: 10px;
 }
@@ -278,48 +185,25 @@ a {
   color: #666;
 }
 
-/* ======================================================
+/* =====================
    MOBILE
-   ====================================================== */
+===================== */
 
 @media (max-width: 900px) {
 
-  .hero .container,
-  .product-layout {
+  .hero .container {
     grid-template-columns: 1fr;
-  }
-
-  .product-media {
-    position: static;
-    margin-bottom: 40px;
   }
 
   .hero h1 {
     font-size: 34px;
   }
 
-  .cta-btn {
-    width: 100%;
-    text-align: center;
-  }
-
   .nav {
     display: none;
   }
 
-  .header-logo-banner {
-    padding: 100px 20px;
+  .hero-banner {
+    height: 160px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
