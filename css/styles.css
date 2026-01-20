@@ -1,209 +1,226 @@
-/* =====================
-   RESET
-===================== */
-
-* {
-  box-sizing: border-box;
+/* ======================================================
+   VARIABLES
+   ====================================================== */
+:root {
+  --accent: #5a2d82;        /* фирменный фиолетовый (логотип) */
+  --accent-blue: #0a57e0;   /* предыдущий синий, можно использовать */
+  --muted: #6b7280;
+  --bg-page: #ffffff;
+  --bg-lavender: #f3eef9;
+  --text-main: #0b1220;
+  --radius: 14px;
 }
 
+/* ======================================================
+   RESET / BASE
+   ====================================================== */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
-}
-
-/* =====================
-   VARIABLES
-===================== */
-
-:root {
-  --accent: #5a2d82;
-  --bg-page: #ffffff;
-  --bg-lavender: #f3eef9;
-  --text-main: #0b1220;
-  --muted: #6b7280;
-}
-
-/* =====================
-   BASE
-===================== */
-
-body {
+  overflow-x: hidden; /* предотвращаем горизонтальную прокрутку при full-bleed */
   font-family: Inter, system-ui, Arial, sans-serif;
   background: var(--bg-page);
   color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
-/* =====================
-   HEADER
-===================== */
+a { text-decoration: none; color: inherit; }
 
+/* ======================================================
+   HEADER TOP BAR
+   ====================================================== */
 .header {
-  background: var(--bg-lavender);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: var(--bg-lavender); /* делаем тот же цвет, что и баннер */
+  /* небольшой shadow если нужно: */
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
 }
 
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 20px 24px;
   display: flex;
   align-items: center;
+  gap: 24px;
 }
 
 .logo-text {
   font-size: 28px;
   font-weight: 800;
   color: var(--accent);
+  letter-spacing: -0.4px;
 }
 
 .nav {
   margin-left: auto;
   display: flex;
   gap: 28px;
-  font-size: 16px;
+  align-items: center;
 }
-
-.nav a {
+.nav .nav-link {
+  color: #222;
+  font-weight: 500;
+}
+.nav .nav-link:hover,
+.nav .nav-link:focus {
   color: var(--accent);
 }
-
-.nav a.active {
+.nav .nav-link.active {
+  color: var(--accent);
   font-weight: 700;
-  text-decoration: underline;
 }
 
-/* =====================
-   FULL WIDTH BANNER
-===================== */
-
-.hero-banner {
+/* ======================================================
+   FULL-WIDTH LOGO BANNER (stretch from edge to edge)
+   ====================================================== */
+/* IMPORTANT:
+   Banner uses an image file located at /psykeub-banner.png
+   Put the file in the site root (same place as index.html).
+*/
+.header-logo-banner {
+  /* make full-bleed across viewport */
   width: 100vw;
-  height: 220px; /* ← регулируй высоту тут */
-
-  background-image: url("psykeub-banner.png");
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-lavender);
+  background-image: url("/psykeub-banner.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  /* КЛЮЧ: выравнивание по краям экрана */
-  margin-left: calc(50% - 50vw);
+  background-position: center center;
+  background-size: cover;           /* cover => fills area, will crop sides if needed */
+  height: 300px;                    /* tweak this value to control banner height */
+  display: block;
 }
 
-/* =====================
-   HERO SECTION
-===================== */
+/* If you prefer the image centered but not cover, use background-size: contain; */
+/* For very large banner use height: 380px or 420px (depends on design). */
 
+/* ======================================================
+   HERO
+   ====================================================== */
 .hero {
-  padding: 100px 0;
+  padding: 80px 0 40px;
+  background: var(--bg-page);
 }
 
-.hero .container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
+  gap: 64px;
   align-items: center;
 }
 
-.hero h1 {
+.hero-title {
   font-size: 48px;
-  line-height: 1.15;
-  margin-bottom: 20px;
+  line-height: 1.05;
+  margin: 0 0 18px;
 }
 
-.hero p {
-  font-size: 18px;
+.hero-sub {
   color: var(--muted);
   max-width: 520px;
-  margin-bottom: 36px;
+  margin-bottom: 18px;
 }
-
-.hero img {
-  width: 100%;
-  border-radius: 18px;
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 30px 60px rgba(0,0,0,.15);
-}
-
-/* =====================
-   BUTTON
-===================== */
 
 .cta-btn {
   display: inline-block;
-  padding: 16px 32px;
   background: var(--accent);
   color: #fff;
-  font-weight: 600;
+  padding: 12px 26px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(90,45,130,.25);
-  transition: .15s ease;
+  font-weight: 600;
+  box-shadow: 0 8px 22px rgba(90,45,130,0.12);
+  transition: transform .15s ease;
+}
+.cta-btn:hover { transform: translateY(-3px); }
+
+.magnet-preview img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+  background: #fff;
+  padding: 20px;
 }
 
-.cta-btn:hover {
-  transform: translateY(-2px);
+/* ======================================================
+   PRODUCT LAYOUT (short)
+   ====================================================== */
+.product-layout {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 56px;
 }
 
-/* =====================
-   FOOTER
-===================== */
+.product-media img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  background: #fff;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+}
 
-footer {
+.product-content h1 { font-size: 36px; margin: 0 0 8px; }
+.price { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+.subtitle { color: #555; max-width: 480px; margin-bottom: 30px; }
+
+/* ======================================================
+   ABOUT + FOOTER
+   ====================================================== */
+.about-section { padding: 60px 0; background: #fff; }
+.about-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+.footer {
   background: var(--bg-lavender);
-  padding: 80px 24px;
-  margin-top: 120px;
+  padding: 60px 24px;
+  margin-top: 80px;
 }
-
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  font-size: 15px;
+  gap: 24px;
+  color: #333;
 }
-
-footer strong {
-  display: block;
-  margin-bottom: 10px;
-}
-
 .footer-bottom {
   text-align: center;
-  margin-top: 60px;
   font-size: 14px;
   color: #666;
+  margin-top: 28px;
 }
 
-/* =====================
-   MOBILE
-===================== */
+/* ======================================================
+   RESPONSIVE
+   ====================================================== */
+@media (max-width: 1000px) {
+  .container { grid-template-columns: 1fr; gap: 40px; }
+  .product-layout { grid-template-columns: 1fr; gap: 30px; margin-top: 20px; }
+  .header-logo-banner { height: 220px; }
+  .hero-title { font-size: 34px; }
+}
 
-@media (max-width: 900px) {
-
-  .hero .container {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .hero-banner {
-    height: 160px;
-  }
+@media (max-width: 600px) {
+  .header-inner { padding: 14px 16px; }
+  .logo-text { font-size: 22px; }
+  .nav { display: none; } /* small screens: hide desktop nav (you can add burger later) */
+  .header-logo-banner { height: 160px; background-position: center 30%; }
+  .hero-title { font-size: 28px; }
+  .cta-btn { width: 100%; text-align: center; padding: 14px; }
 }
