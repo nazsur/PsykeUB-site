@@ -79,6 +79,12 @@ a { text-decoration: none; color: inherit; }
    ====================================================== */
 .header-logo-banner{
   /* edge-to-edge trick: make element full viewport width */
+   .header-logo-banner {
+  border-top: none !important;
+}
+.header + .header-logo-banner {
+  margin-top: 0;
+}
   width: 100vw;
   margin-left: calc(50% - 50vw);
   height: 260px;              /* <-- juster høyde her (redusert fra før) */
@@ -221,6 +227,7 @@ a { text-decoration: none; color: inherit; }
 
   .nav { display: none; }
 }
+
 
 
 
