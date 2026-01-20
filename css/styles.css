@@ -94,13 +94,16 @@ a {
 
 .header-logo-banner {
   width: 100%;
-  height: 420px; /* можешь менять 360–480 */
+  height: 420px;                /* высота как у 7STERKE */
+
   background-color: #f3eef9;
   background-image: url("psykeub-banner.png");
+
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover;       /* 🔥 РАСТЯГИВАЕТ */
 }
+
 
 /* ======================================================
    HERO (MAIN PAGE)
@@ -307,6 +310,7 @@ a {
     padding: 100px 20px;
   }
 }
+
 
 
 
