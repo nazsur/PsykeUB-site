@@ -1,84 +1,182 @@
 <!doctype html>
 <html lang="nb">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>PsykeUB – Kritisk hjelp alltid innen rekkevidde</title>
+<title>PsykeUB – Kritisk hjelp alltid innen rekkevidde</title>
 
-  <!-- FAVICONS -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="/favicon_64.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_180.png">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<style>
+/* =====================
+   RESET
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Inter, system-ui, Arial;
+  color: #0b1220;
+}
+
+/* =====================
+   HEADER / NAV
+===================== */
+.header {
+  background: #f3eef9;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: #5a2d82;
+  text-decoration: none;
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #5a2d82;
+  font-weight: 500;
+}
+
+.nav a.active {
+  font-weight: 700;
+}
+
+/* =====================
+   FULL WIDTH BANNER
+===================== */
+.hero-banner {
+  width: 100vw;
+  height: 360px;
+
+  background-image: url("psykeub-banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-color: #f3eef9;
+
+  margin-left: calc(50% - 50vw);
+}
+
+/* =====================
+   HERO CONTENT
+===================== */
+.hero {
+  padding: 100px 24px;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 32px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 16px 32px;
+  background: #5a2d82;
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero-banner {
+    height: 240px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo-text">PsykeUB</a>
+    <a href="#" class="logo-text">PsykeUB</a>
 
     <nav class="nav">
-      <a href="index.html" class="active">Hjem</a>
-      <a href="product.html">Nettbutikk</a>
-      <a href="om-oss.html">Om oss</a>
-      <a href="#footer">Kontakt</a>
+      <a href="#" class="active">Hjem</a>
+      <a href="#">Nettbutikk</a>
+      <a href="#">Om oss</a>
+      <a href="#">Kontakt</a>
     </nav>
   </div>
 </header>
 
-<!-- FULL WIDTH BANNER -->
-<section class="hero-banner"></section>
+<div class="hero-banner"></div>
 
-<!-- MAIN -->
-<main>
-
-  <section class="hero">
-    <div class="container">
-      <div>
-        <h1>Kritisk hjelp<br>alltid innen rekkevidde</h1>
-        <p>
-          De viktigste norske nødnumrene og hjelpelinjen for mental helse –
-          samlet på én magnet, synlig i hverdagen.
-        </p>
-        <a href="product.html" class="cta-btn">Kjøp magneten</a>
-      </div>
-
-      <img src="bilde.png" alt="Sikkerhetsmagnet PsykeUB">
-    </div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer id="footer">
-  <div class="footer-inner">
+<section class="hero">
+  <div class="hero-inner">
     <div>
-      <strong>Kontakt</strong>
-      psykeub@gmail.no
+      <h1>Kritisk hjelp<br>alltid innen rekkevidde</h1>
+      <p>
+        De viktigste norske nødnumrene og hjelpelinjen for mental helse –
+        samlet på én magnet, synlig i hverdagen.
+      </p>
+      <a href="#" class="cta-btn">Kjøp magneten</a>
     </div>
 
-    <div>
-      <strong>Følg oss</strong>
-      Instagram<br>
-      Facebook
-    </div>
-
-    <div>
-      <strong>PsykeUB</strong>
-      Ungdomsbedrift – 2025
-    </div>
+    <img src="bilde.png" alt="PsykeUB magnet">
   </div>
-
-  <div class="footer-bottom">
-    © PsykeUB | Laget med ❤️ i Norge
-  </div>
-</footer>
+</section>
 
 </body>
 </html>
