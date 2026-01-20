@@ -13,19 +13,17 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
   <style>
-    /* =====================
-       VARIABLES
-       ===================== */
     :root {
       --accent: #0a57e0;
       --muted: #6b7280;
       --bg: #ffffff;
       --lavender: #f3eef9;
       --text: #0b1220;
-      --radius: 14px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -46,7 +44,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: #fff;
+      background: #ffffff;
     }
 
     .header-inner {
@@ -78,17 +76,20 @@
     }
 
     /* =====================
-       LOGO BANNER (LIKE 7STERKE)
+       LOGO BANNER (FULL WIDTH)
        ===================== */
     .header-logo-banner {
+      width: 100%;
       background: var(--lavender);
-      padding: 60px 20px 50px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
 
     .header-logo-banner img {
-      max-width: 420px;
       width: 100%;
+      max-width: 1600px;
+      height: auto;
+      display: block;
     }
 
     /* =====================
@@ -96,7 +97,6 @@
        ===================== */
     .hero {
       padding: 100px 0;
-      margin-top: 40px;
     }
 
     .hero .container {
@@ -126,10 +126,11 @@
       display: inline-block;
       padding: 16px 32px;
       background: var(--accent);
-      color: #fff;
+      color: #ffffff;
       font-weight: 600;
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(10,87,224,.18);
+      transition: 0.15s ease;
     }
 
     .cta-btn:hover {
@@ -139,7 +140,7 @@
     .hero img {
       width: 100%;
       border-radius: 18px;
-      background: #fff;
+      background: #ffffff;
       padding: 20px;
       box-shadow: 0 30px 60px rgba(0,0,0,.15);
     }
@@ -174,12 +175,25 @@
       font-size: 14px;
       color: #666;
     }
+
+    @media (max-width: 900px) {
+      .hero .container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="logo-text">PsykeUB</a>
@@ -194,12 +208,12 @@
 </header>
 
 <!-- LOGO BANNER -->
-<div class="header-logo-banner"></div>
+<div class="header-logo-banner">
+  <img src="psykeub-banner.png" alt="PsykeUB banner">
+</div>
 
-<!-- MAIN -->
 <main>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div>
@@ -217,7 +231,6 @@
 
 </main>
 
-<!-- FOOTER -->
 <footer id="footer">
   <div class="footer-inner">
     <div>
@@ -244,4 +257,3 @@
 
 </body>
 </html>
-
