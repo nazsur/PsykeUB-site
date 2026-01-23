@@ -35,7 +35,7 @@ a { text-decoration: none; color: inherit; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--lavender); /* samme farge som banner - gir helhet */
+  background:  #f3eef9; /* samme farge som banner - gir helhet */
 }
 .header {
   border-bottom: none !important;
@@ -443,6 +443,7 @@ a { text-decoration: none; color: inherit; }
   text-decoration: underline;
   color: var(--purple);
 }
+
 
 
 
