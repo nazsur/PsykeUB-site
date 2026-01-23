@@ -384,3 +384,12 @@ a { text-decoration: none; color: inherit; }
     grid-template-columns: 1fr;
   }
 }
+
+/* ======================================================
+   FOOTER REVEAL SPACE (KEY TO 7STERKE EFFECT)
+   ====================================================== */
+
+.footer-reveal-space {
+  height: 100vh;        /* создаёт пространство для "проявления" футера */
+  background: transparent;
+}
