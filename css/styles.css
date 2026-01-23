@@ -71,11 +71,6 @@ a { text-decoration: none; color: inherit; }
 /* ======================================================
    LOGO BANNER — full width, background image (streched)
    ====================================================== */
-.header-logo-banner{
-  /* edge-to-edge trick: make element full viewport width */
-   .header-logo-banner {
-  border-top: none !important;
-}
 .header + .header-logo-banner {
   margin-top: 0;
 }
@@ -516,6 +511,7 @@ body {
     top: auto;
   }
 }
+
 
 
 
