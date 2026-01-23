@@ -412,3 +412,9 @@ a { text-decoration: none; color: inherit; }
     var(--lavender)
   );
 }
+
+.big-footer-logo img {
+  max-width: 420px;
+  width: 100%;
+  opacity: 0.12;      /* как у фонового лого */
+}
