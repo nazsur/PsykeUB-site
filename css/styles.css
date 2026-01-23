@@ -449,17 +449,23 @@ body {
 .product-layout {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 24px;   /* padding ПЕРЕНЕСЁН СЮДА */
+  padding: 80px 24px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 80px;
   align-items: start;
 }
 
+/* LEFT: IMAGE */
 .product-media {
   position: sticky;
-  top: 120px;           /* под хедер */
-  align-self: flex-start;
+  top: 120px;
+  height: fit-content;
+}
+
+/* RIGHT: CONTENT */
+.product-content {
+  min-height: 200vh; /* ← КЛЮЧЕВОЙ МОМЕНТ */
 }
 
 .product-media img {
@@ -511,6 +517,7 @@ body {
     top: auto;
   }
 }
+
 
 
 
