@@ -444,6 +444,10 @@ a { text-decoration: none; color: inherit; }
   color: var(--purple);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 
