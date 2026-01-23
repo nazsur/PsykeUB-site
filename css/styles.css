@@ -434,6 +434,16 @@ a { text-decoration: none; color: inherit; }
   text-align: left;   /* текст ровный, не по центру */
 }
 
+.big-footer-content a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.big-footer-content a:hover {
+  text-decoration: underline;
+  color: var(--purple);
+}
+
 
 
 
