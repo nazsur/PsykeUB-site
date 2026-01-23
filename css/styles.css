@@ -443,6 +443,80 @@ body {
   scroll-behavior: smooth;
 }
 
+/* ======================================================
+   PRODUCT PAGE LAYOUT
+   ====================================================== */
+
+.product-page {
+  padding: 80px 24px;
+  background: #fff;
+}
+
+.product-layout {
+  max-width: 1200px;        /* отступы по краям сайта */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* слева фото, справа текст */
+  gap: 80px;
+  align-items: start;
+}
+
+/* LEFT: IMAGE */
+.product-media {
+  position: sticky;
+  top: 140px; /* ниже хедера */
+}
+
+.product-media img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+/* RIGHT: CONTENT */
+.product-content h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.product-content .price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 16px;
+}
+
+.product-content section {
+  margin-top: 48px;
+}
+
+.product-content h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.product-content p,
+.product-content li {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ======================================================
+   PRODUCT PAGE — MOBILE
+   ====================================================== */
+
+@media (max-width: 900px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .product-media {
+    position: relative; /* убираем sticky на мобилке */
+    top: auto;
+  }
+}
+
 
 
 
