@@ -520,15 +520,68 @@ body {
   }
 }
 
+/* ======================================================
+   ABOUT PAGE
+   ====================================================== */
 
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+}
 
+.about-hero {
+  margin-bottom: 80px;
+}
 
+.about-hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
 
+.about-hero .lead {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 640px;
+}
 
+.about-block {
+  margin-bottom: 64px;
+}
 
+.about-block h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
 
+.about-block p,
+.about-block li {
+  color: var(--muted);
+  line-height: 1.7;
+}
 
+.about-block ul {
+  padding-left: 20px;
+}
 
+.about-block.highlight {
+  background: var(--lavender);
+  padding: 32px;
+  border-radius: 16px;
+}
 
+.about-block.subtle {
+  border-top: 1px solid #eee;
+  padding-top: 48px;
+}
 
+.about-block.team ul li {
+  margin-bottom: 8px;
+}
 
+/* MOBILE */
+@media (max-width: 700px) {
+  .about-hero h1 {
+    font-size: 36px;
+  }
+}
