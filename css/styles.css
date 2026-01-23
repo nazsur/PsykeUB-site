@@ -424,6 +424,16 @@ a { text-decoration: none; color: inherit; }
   background: transparent;
 }
 
+.big-footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 120px;          /* расстояние между Kontakt и Følg oss */
+}
+
+.big-footer-content > div {
+  text-align: left;   /* текст ровный, не по центру */
+}
+
 
 
 
