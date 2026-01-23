@@ -336,7 +336,7 @@ a { text-decoration: none; color: inherit; }
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 120px 24px 80px;
+  padding: 60px 24px 60px;
 }
 
 .big-footer-logo {
@@ -414,7 +414,9 @@ a { text-decoration: none; color: inherit; }
 }
 
 .big-footer-logo img {
-  max-width: 420px;
-  width: 100%;
-  opacity: 0.12;      /* как у фонового лого */
+  width: 520px;      /* делаем как нормальное лого */
+  max-width: 90%;
+  opacity: 0.18;     /* теперь реально видно */
 }
+
+
