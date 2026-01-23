@@ -274,18 +274,19 @@ a { text-decoration: none; color: inherit; }
 
 .brand-banner {
   width: 100%;
-  background: var(--lavender);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-  max-height: 360px;
-  overflow: hidden;
+  height: 340px;              /* ← контролируешь высоту тут */
+  background-color: var(--lavender);
+  background-image: url('../psykeub-banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;     /* растягивается от края до края */
 }
+
 
 .brand-banner img {
   max-height: 320px;
   width: auto;
   max-width: 100%;
 }
+
 
