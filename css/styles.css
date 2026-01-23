@@ -367,6 +367,35 @@ a { text-decoration: none; color: inherit; }
   padding: 80px 24px 40px;
 }
 
-/* остальное оставляем как было */
+/* ======================================================
+   FOOTER BACKGROUND EFFECT (SAFE VERSION)
+   ====================================================== */
+
+/* Переходный блок */
+.footer-spacer {
+  height: 100vh;
+  background: transparent;
+}
+
+/* Сам футер */
+.big-footer {
+  min-height: 100vh;
+  background: var(--lavender);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px;
+}
+
+.big-footer-logo {
+  font-size: 120px;
+  font-weight: 800;
+  color: var(--purple);
+  opacity: 0.08;
+  margin-bottom: 60px;
+}
+
+
 
 
