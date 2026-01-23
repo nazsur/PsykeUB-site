@@ -347,4 +347,26 @@ a { text-decoration: none; color: inherit; }
   }
 }
 
+/* ======================================================
+   FOOTER REVEAL EFFECT (7sterke-style)
+   ====================================================== */
+
+.footer-wrapper {
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+}
+
+.big-footer {
+  min-height: 100vh;
+  background: var(--lavender);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px 40px;
+}
+
+/* остальное оставляем как было */
+
 
