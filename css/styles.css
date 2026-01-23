@@ -278,15 +278,14 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 24px;
+  padding: 24px;
+  max-height: 360px;
+  overflow: hidden;
 }
 
 .brand-banner img {
-  max-width: 1100px;
-  width: 100%;
-  height: auto;
+  max-height: 320px;
+  width: auto;
+  max-width: 100%;
 }
-
-
-
 
