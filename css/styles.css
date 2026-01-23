@@ -228,6 +228,65 @@ a { text-decoration: none; color: inherit; }
   .nav { display: none; }
 }
 
+/* ======================================================
+   TOP NAVIGATION (7sterke-style)
+   ====================================================== */
+
+.top-header {
+  background: var(--lavender);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.top-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.site-name {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--purple);
+}
+
+.top-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
+}
+
+.top-nav a {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.top-nav a.active {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+/* ======================================================
+   BRAND BANNER (LOGO BLOCK)
+   ====================================================== */
+
+.brand-banner {
+  width: 100%;
+  background: var(--lavender);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 24px;
+}
+
+.brand-banner img {
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
+}
+
 
 
 
