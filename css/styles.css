@@ -32,12 +32,6 @@ a { text-decoration: none; color: inherit; }
    HEADER (top bar) — same color as banner, no border line
    ====================================================== */
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background:  #f3eef9; /* samme farge som banner - gir helhet */
-}
-.header {
   border-bottom: none !important;
   box-shadow: none !important;
 }
@@ -448,6 +442,7 @@ html,
 body {
   scroll-behavior: smooth;
 }
+
 
 
 
