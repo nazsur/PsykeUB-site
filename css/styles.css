@@ -186,28 +186,6 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ======================================================
-   FOOTER
-   ====================================================== */
-.footer {
-  background: var(--lavender);
-  padding: 60px 24px;
-  margin-top: 60px;
-}
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  color: #333;
-}
-.footer-bottom {
-  text-align: center;
-  margin-top: 28px;
-  color: #666;
-}
-
-/* ======================================================
    RESPONSIVE
    ====================================================== */
 @media (max-width: 900px) {
@@ -348,14 +326,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ======================================================
-   FOOTER REVEAL EFFECT (7sterke-style)
+   FINAL BIG FOOTER (7sterke-like, SAFE VERSION)
    ====================================================== */
-
-.footer-wrapper {
-  position: sticky;
-  bottom: 0;
-  z-index: 0;
-}
 
 .big-footer {
   min-height: 100vh;
@@ -364,28 +336,7 @@ a { text-decoration: none; color: inherit; }
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 24px 40px;
-}
-
-/* ======================================================
-   FOOTER BACKGROUND EFFECT (SAFE VERSION)
-   ====================================================== */
-
-/* Переходный блок */
-.footer-spacer {
-  height: 100vh;
-  background: transparent;
-}
-
-/* Сам футер */
-.big-footer {
-  min-height: 100vh;
-  background: var(--lavender);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 24px;
+  padding: 120px 24px 80px;
 }
 
 .big-footer-logo {
@@ -393,9 +344,43 @@ a { text-decoration: none; color: inherit; }
   font-weight: 800;
   color: var(--purple);
   opacity: 0.08;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+  text-align: center;
 }
 
+.big-footer-content {
+  max-width: 1000px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
 
+.big-footer-content h4 {
+  margin-bottom: 12px;
+  color: var(--purple);
+}
 
+.big-footer-content a {
+  color: inherit;
+}
 
+.big-footer-bottom {
+  margin-top: 80px;
+  font-size: 14px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .big-footer-logo {
+    font-size: 64px;
+    margin-bottom: 40px;
+  }
+
+  .big-footer-content {
+    grid-template-columns: 1fr;
+  }
+}
