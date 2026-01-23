@@ -393,3 +393,22 @@ a { text-decoration: none; color: inherit; }
   height: 100vh;        /* создаёт пространство для "проявления" футера */
   background: transparent;
 }
+
+/* Soft transition into footer */
+.big-footer {
+  position: relative;
+}
+
+.big-footer::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    var(--lavender)
+  );
+}
