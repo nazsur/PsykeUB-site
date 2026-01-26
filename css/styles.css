@@ -196,9 +196,6 @@ a { text-decoration: none; color: inherit; }
     font-size: 22px;
   }
 
-  .nav { display: none; }
-}
-
 /* ======================================================
    TOP NAVIGATION (7sterke-style)
    ====================================================== */
@@ -591,5 +588,11 @@ body {
 
   .magnet-preview img {
     padding: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-nav {
+    display: none !important;
   }
 }
