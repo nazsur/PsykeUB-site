@@ -91,7 +91,8 @@ a { text-decoration: none; color: inherit; }
    HERO
    ====================================================== */
 .hero { 
-  padding: 120px 0 80px; /* ↑ увеличили отступ СВЕРХУ */
+  margin-top: 40px;   /* ← вот он, нужный отступ */
+  padding: 80px 0; 
   background: #ffffff; 
 }
 
@@ -507,6 +508,7 @@ body {
     font-size: 36px;
   }
 }
+
 
 
 
