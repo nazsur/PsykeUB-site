@@ -276,12 +276,14 @@ a { text-decoration: none; color: inherit; }
 }
 
 .big-footer-content h4 {
-  margin-bottom: 12px;
-  color: var(--purple);
+  font-size: 18px;
+  margin-bottom: 16px;
 }
 
+.big-footer-content p,
 .big-footer-content a {
-  color: inherit;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .big-footer-bottom {
@@ -500,6 +502,7 @@ body {
     font-size: 36px;
   }
 }
+
 
 
 
