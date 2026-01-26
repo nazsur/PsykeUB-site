@@ -509,6 +509,67 @@ body {
   }
 }
 
+/* =========================
+   BURGER BUTTON
+   ========================= */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 26px;
+  height: 3px;
+  background: var(--purple);
+  border-radius: 2px;
+}
+
+/* =========================
+   MOBILE NAV
+   ========================= */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: var(--lavender);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 20px 24px;
+  gap: 20px;
+}
+
+.mobile-nav a {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================
+   MOBILE HEADER RULES
+   ========================= */
+@media (max-width: 900px) {
+  .top-nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .mobile-nav.show {
+    display: flex;
+  }
+
+  .top-header-inner {
+    position: relative;
+  }
+}
+
 
 
 
