@@ -71,21 +71,21 @@ a { text-decoration: none; color: inherit; }
 /* ======================================================
    LOGO BANNER — full width, background image (streched)
    ====================================================== */
-.header + .header-logo-banner {
-  margin-top: 0;
-}
+.header-logo-banner {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  height: 260px;              /* <-- juster høyde her (redusert fra før) */
+  height: 260px;
   background-color: var(--lavender);
-  background-image: url('/psykeub-banner.png'); /* put banner file in root */
+  background-image: url('/psykeub-banner.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;     /* cover for å fylle hele området */
+  background-size: cover;
   display: block;
 }
 
-/* If you prefer to show img instead of background, replace above with an <img> inside and style .header-logo-banner img */
+.header + .header-logo-banner {
+  margin-top: 0;
+}
 
 /* ======================================================
    HERO
@@ -508,6 +508,7 @@ body {
     font-size: 36px;
   }
 }
+
 
 
 
