@@ -327,8 +327,8 @@ a { text-decoration: none; color: inherit; }
 .big-footer-content {
   display: flex;
   justify-content: space-between;
-  gap: 80px;
-  max-width: 1100px;
+  gap: 70px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -344,12 +344,6 @@ a { text-decoration: none; color: inherit; }
 .big-footer-content a:hover {
   text-decoration: underline;
   color: var(--purple);
-}
-
-.big-footer-content > div {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
 }
 
 html,
@@ -510,6 +504,7 @@ body {
     font-size: 36px;
   }
 }
+
 
 
 
