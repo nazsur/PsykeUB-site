@@ -90,7 +90,10 @@ a { text-decoration: none; color: inherit; }
 /* ======================================================
    HERO
    ====================================================== */
-.hero { padding: 80px 0; background: #ffffff; }
+.hero { 
+  padding: 120px 0 80px; /* ↑ увеличили отступ СВЕРХУ */
+  background: #ffffff; 
+}
 
 .hero .container {
   max-width: 1200px;
@@ -504,6 +507,7 @@ body {
     font-size: 36px;
   }
 }
+
 
 
 
