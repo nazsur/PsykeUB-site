@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sikkerhetsmagnet – PsykeUB</title>
   <link rel="stylesheet" href="css/styles.css">
+  <button class="burger" id="burger-btn" aria-label="Åpne meny">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Hjem</a>
+  <a href="product.html">Produkt</a>
+  <a href="om-oss.html">Om oss</a>
+  <a href="#footer">Kontakt</a>
+</nav>
+
 </head>
 
 <body>
@@ -177,21 +190,11 @@ Beløp: <strong>200 kr</strong><br>
 
 </footer>
 
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burger-btn");
-  const mobileNav = document.getElementById("mobile-nav");
-
-  burger.addEventListener("click", function () {
-    burger.classList.toggle("active");
-    mobileNav.classList.toggle("show");
-  });
-});
-</script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>
+
 
 
 
