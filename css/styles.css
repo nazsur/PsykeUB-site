@@ -257,67 +257,14 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ======================================================
-   BIG FOOTER (7sterke-style)
+   FINAL BIG FOOTER 
    ====================================================== */
 
 .big-footer {
-  min-height: 90vh;              /* почти весь экран */
   background: var(--lavender);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 24px 60px;
+  padding: 48px 24px 32px; /* компактно */
 }
 
-.big-footer-content {
-  max-width: 1000px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  text-align: center;
-}
-
-.big-footer-content h4 {
-  margin-bottom: 12px;
-  color: var(--purple);
-}
-
-.big-footer-content a {
-  color: inherit;
-}
-
-.big-footer-bottom {
-  margin-top: 60px;
-  font-size: 14px;
-  opacity: 0.6;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .big-footer-logo {
-    font-size: 64px;
-  }
-
-  .big-footer-content {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ======================================================
-   FINAL BIG FOOTER (7sterke-like, SAFE VERSION)
-   ====================================================== */
-
-.big-footer {
-  min-height: 100vh;
-  background: var(--lavender);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  padding: 80px 24px 60px;
-}
 
 .big-footer-content {
   max-width: 1000px;
@@ -567,5 +514,6 @@ body {
     font-size: 36px;
   }
 }
+
 
 
