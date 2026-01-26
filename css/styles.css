@@ -327,7 +327,7 @@ a { text-decoration: none; color: inherit; }
 .big-footer-content {
   display: flex;
   justify-content: space-between;
-  gap: 70px;
+  gap: 65px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -504,6 +504,7 @@ body {
     font-size: 36px;
   }
 }
+
 
 
 
