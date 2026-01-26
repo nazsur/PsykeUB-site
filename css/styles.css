@@ -267,16 +267,7 @@ a { text-decoration: none; color: inherit; }
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 24px 40px;
-}
-
-.big-footer-logo {
-  font-size: 120px;
-  font-weight: 800;
-  color: var(--purple);
-  opacity: 0.08;                 /* эффект "фона" */
-  margin-bottom: 60px;
-  text-align: center;
+  padding: 80px 24px 60px;
 }
 
 .big-footer-content {
@@ -325,16 +316,7 @@ a { text-decoration: none; color: inherit; }
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  padding: 60px 24px 60px;
-}
-
-.big-footer-logo {
-  font-size: 120px;
-  font-weight: 800;
-  color: var(--purple);
-  opacity: 0.08;
-  margin-bottom: 80px;
-  text-align: center;
+  padding: 80px 24px 60px;
 }
 
 .big-footer-content {
@@ -400,12 +382,6 @@ a { text-decoration: none; color: inherit; }
     rgba(255,255,255,0),
     var(--lavender)
   );
-}
-
-.big-footer-logo img {
-  width: 520px;      /* делаем как нормальное лого */
-  max-width: 90%;
-  opacity: 1;     /* теперь реально видно */
 }
 
 .footer-transition-space {
@@ -591,4 +567,5 @@ body {
     font-size: 36px;
   }
 }
+
 
