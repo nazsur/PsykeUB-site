@@ -504,6 +504,12 @@ body {
   line-height: 1.6;
 }
 
+.vipps-qr {
+  display: block;
+  max-width: 260px;
+  margin: 24px 0;
+}
+
 /* ======================================================
    PRODUCT PAGE — MOBILE
    ====================================================== */
@@ -585,3 +591,4 @@ body {
     font-size: 36px;
   }
 }
+
