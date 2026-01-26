@@ -14,6 +14,18 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="/favicon_64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon_180.png">
+  <button class="burger" id="burger-btn" aria-label="Åpne meny">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Hjem</a>
+  <a href="product.html">Produkt</a>
+  <a href="om-oss.html">Om oss</a>
+  <a href="#footer">Kontakt</a>
+</nav>
 </head>
 
 <body>
@@ -152,18 +164,7 @@
 
 </footer>
 
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burger-btn");
-  const mobileNav = document.getElementById("mobile-nav");
-
-  burger.addEventListener("click", function () {
-    burger.classList.toggle("active");
-    mobileNav.classList.toggle("show");
-  });
-});
-</script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>
