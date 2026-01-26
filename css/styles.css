@@ -195,7 +195,7 @@ a { text-decoration: none; color: inherit; }
   .logo-text {
     font-size: 22px;
   }
-
+}
 /* ======================================================
    TOP NAVIGATION (7sterke-style)
    ====================================================== */
@@ -596,3 +596,4 @@ body {
     display: none !important;
   }
 }
+
