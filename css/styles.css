@@ -570,14 +570,26 @@ body {
   }
 }
 
+@media (max-width: 700px) {
+  .hero {
+    padding: 60px 0;
+  }
 
+  .hero-left h1 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
 
+  .hero-left p {
+    font-size: 16px;
+  }
 
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
 
-
-
-
-
-
-
-
+  .magnet-preview img {
+    padding: 12px;
+  }
+}
