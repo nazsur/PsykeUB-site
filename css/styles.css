@@ -346,6 +346,12 @@ a { text-decoration: none; color: inherit; }
   color: var(--purple);
 }
 
+.big-footer-content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 html,
 body {
   scroll-behavior: smooth;
@@ -504,6 +510,7 @@ body {
     font-size: 36px;
   }
 }
+
 
 
 
