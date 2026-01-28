@@ -615,4 +615,37 @@ body {
   position: relative;
 }
 
+/* === PRODUCT PAGE MOBILE TYPOGRAPHY === */
+@media (max-width: 700px) {
+
+  .product-layout {
+    padding: 48px 20px;
+  }
+
+  .product-content h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .product-content .price {
+    text-align: center;
+  }
+
+  .product-content section {
+    margin-top: 36px;
+  }
+
+  .product-content p,
+  .product-content li {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .product-media img {
+    max-width: 420px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
 
