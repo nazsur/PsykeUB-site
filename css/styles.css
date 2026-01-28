@@ -610,3 +610,9 @@ body {
   }
 }
 
+/* === FIX: mobile menu positioning on all pages === */
+.top-header-inner {
+  position: relative;
+}
+
+
