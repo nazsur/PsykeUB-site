@@ -648,4 +648,34 @@ body {
   }
 }
 
+/* === PRICE SALE STYLE === */
+.price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.old-price {
+  font-size: 20px;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.new-price {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--purple);
+}
+@media (max-width: 700px) {
+  .price {
+    justify-content: center;
+  }
+}
+.new-price::before {
+  content: "Nå ";
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
 
