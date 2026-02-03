@@ -673,9 +673,8 @@ body {
 }
 .new-price::before {
   content: "Nå ";
-  font-size: 14px;
+  font-size: 20px;          /* такой же, как у .old-price */
   font-weight: 600;
-  margin-right: 4px;
+  color: var(--purple);
+  margin-right: 6px;
 }
-
-
